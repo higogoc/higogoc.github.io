@@ -9672,7 +9672,10 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-    .cv-container {
+
+
+    
+  .cv-container {
       position: relative;
       width: 100%;
       max-width: 800px;
