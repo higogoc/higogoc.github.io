@@ -22,6 +22,12 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.lang-ko { display: none; }
+		body.lang-mode-ko .lang-en { display: none; }
+		body.lang-mode-ko .lang-ko { display: inline; }
+		#lang-toggle-btn { cursor: pointer; }
+	</style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -37,6 +43,7 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#" id="lang-toggle-btn" class="nav-link"><span>&#127760; <span id="lang-toggle-label">한국어</span></span></a></li>
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
@@ -333,14 +340,18 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">2025</span>
+								<span class="date">2026</span>
 								<div class="d-flex">
-									<h2>Deep Learning Model for Metabolic Bone Disease of Prematurity Using Wrist Radiographs</h2>
+									<h2>Deep Learning Using Wearable Single-Lead ECG for Early Detection of Post-Thyroidectomy Hypocalcemia</h2>
 								</div>
-								<div><span class="badge badge-primary" style="background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-bottom: 5px;">1저자</span></div>
-								<span class="position"><strong>Jeong, S.</strong> (1저자), et al. (2025). Scientific Reports, Under Review.</span>
-								<div><b class="text-dark">Tech Stack: </b>Deep Learning, Medical Image Processing</div>
-								<p>Deep learning model development for metabolic bone disease detection in premature infants using wrist radiographs</p>
+								<div class="mb-1">
+									<span class="badge" style="background-color: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 4px;">Q1</span>
+									<span class="badge badge-primary" style="background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em;"><span class="lang-en">1st Author</span><span class="lang-ko">1저자</span></span>
+								</div>
+								<span class="position">Lee, S., <strong>Jeong, S.</strong> (1저자), Joo, H., Kong, Y., Lee, J. K., Kim, W., Yu, H. W., Kim, S., Chai, Y. J., Choi, J. Y., Kong, H. J., & Lee, K. E. (2026). Surgery.</span>
+								<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0039606026005246"><span class="lang-en">Publication</span><span class="lang-ko">논문 보기</span></a></div>
+								<div><b class="text-dark"><span class="lang-en">Tech Stack: </span><span class="lang-ko">기술 스택: </span></b>Deep Learning, Wearable Biosignal Processing</div>
+								<p><span class="lang-en">Deep learning model using wearable single-lead ECG signals for early detection of hypocalcemia following thyroidectomy, enabling continuous non-invasive postoperative monitoring.</span><span class="lang-ko">웨어러블 단일유도 심전도(ECG) 신호를 활용하여 갑상선절제술 후 발생하는 저칼슘혈증을 조기에 발견하는 딥러닝 모델로, 비침습적인 지속 모니터링을 가능하게 합니다.</span></p>
 							</div>
 						</div>
 
@@ -349,13 +360,18 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">2025</span>
+								<span class="date">2026</span>
 								<div class="d-flex">
 									<h2>Immersive Virtual Reality Training to Improve Novice Physicians' Emergency Response Skills: A Randomized Controlled Trial</h2>
 								</div>
-								<span class="position">Jeong, S., et al. (2025). Journal of Medical Internet Research, Under Review.</span>
-								<div><b class="text-dark">Tech Stack: </b>Virtual Reality, XR, Medical Training</div>
-								<p>Randomized controlled trial evaluating the effectiveness of immersive VR training for improving emergency response skills in novice physicians</p>
+								<div class="mb-1">
+									<span class="badge" style="background-color: #6f42c1; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 4px;"><span class="lang-en">Conference Presentation</span><span class="lang-ko">학술대회 발표</span></span>
+									<span class="badge" style="background-color: #20c997; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 4px;"><span class="lang-en">International</span><span class="lang-ko">국제</span></span>
+									<span class="badge" style="background-color: #6c757d; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em;"><span class="lang-en">Oral Presentation</span><span class="lang-ko">구두 발표</span></span>
+								</div>
+								<span class="position">AMEE Conference 2026 (International Health Professions Education), Austria Center Vienna, Vienna, Austria (Aug 22&ndash;26, 2026)</span>
+								<div><b class="text-dark"><span class="lang-en">Tech Stack: </span><span class="lang-ko">기술 스택: </span></b>Virtual Reality, XR, Medical Training</div>
+								<p><span class="lang-en">Oral presentation of a randomized controlled trial on immersive VR training for improving novice physicians' emergency response skills, presented at AMEE Conference 2026.</span><span class="lang-ko">초보 의사의 응급 대응 역량 향상을 위한 몰입형 VR 훈련에 관한 무작위대조시험(RCT) 연구를 AMEE Conference 2026에서 구두로 발표하였습니다.</span></p>
 							</div>
 						</div>
 
@@ -364,15 +380,58 @@
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
-								<span class="date">2025</span>
+								<span class="date">2026</span>
+								<div class="d-flex">
+									<h2>Metaverse-based Objective Structured Clinical Examinations: An Exploratory Approach to Advancing Clinical Competency Assessment</h2>
+								</div>
+								<div class="mb-1">
+									<span class="badge" style="background-color: #6c757d; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em;">Q2</span>
+								</div>
+								<span class="position">Huh, Y. J., Shin, J. S., Yoon, N., Kim, J. W., Kim, D. H., Kim, C., <strong>Jeong, S.</strong>, Yoon, Y., Shin, S., Kong, H. J., & Myung, S. J. (2026). Korea Journal of Medical Education.</span>
+								<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://doi.org/10.3946/kjme.2025.151"><span class="lang-en">Publication</span><span class="lang-ko">논문 보기</span></a></div>
+								<div><b class="text-dark"><span class="lang-en">Tech Stack: </span><span class="lang-ko">기술 스택: </span></b>Metaverse, XR, Medical Education Assessment</div>
+								<p><span class="lang-en">Exploratory study evaluating a metaverse-based objective structured clinical examination (OSCE) platform as a new approach for assessing clinical competency.</span><span class="lang-ko">메타버스 기반 객관구조화진료시험(OSCE) 플랫폼을 활용하여 임상 수행능력 평가의 새로운 접근법을 탐색한 연구입니다.</span></p>
+							</div>
+						</div>
+
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2026</span>
+								<div class="d-flex">
+									<h2>Deep Learning Model for Identification of Metabolic Bone Disease of Prematurity Using Wrist Radiographs</h2>
+								</div>
+								<div class="mb-1">
+									<span class="badge" style="background-color: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 4px;">Q1</span>
+									<span class="badge badge-primary" style="background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em;"><span class="lang-en">1st Author</span><span class="lang-ko">1저자</span></span>
+								</div>
+								<span class="position">Park, S. G., <strong>Jeong, S.</strong> (1저자), Cho, M., Kim, M. J., Choi, C. W., Kim, E. K., Cheon, J. E., & Kong, H. J. (2026). Scientific Reports.</span>
+								<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://doi.org/10.1038/s41598-026-37116-7"><span class="lang-en">Publication</span><span class="lang-ko">논문 보기</span></a></div>
+								<div><b class="text-dark"><span class="lang-en">Tech Stack: </span><span class="lang-ko">기술 스택: </span></b>Deep Learning, Medical Image Processing</div>
+								<p><span class="lang-en">Deep learning model development for identification of metabolic bone disease of prematurity using wrist radiographs, developed and validated using clinical data.</span><span class="lang-ko">손목 방사선 영상을 이용하여 미숙아 대사성 골질환을 식별하는 딥러닝 모델을 개발하고 임상 데이터로 검증한 연구입니다.</span></p>
+							</div>
+						</div>
+
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2026</span>
 								<div class="d-flex">
 									<h2>Deep Learning-based Model for Breast Implant Classification in Ultrasonography</h2>
 								</div>
-								<div><span class="badge badge-success" style="background-color: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-bottom: 5px;">Q1 저널 (상위 10%)</span> <span class="badge badge-primary" style="background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-bottom: 5px;">1저자</span></div>
-							<span class="position"><strong>Jeong, S.</strong> (1저자), Yoo, H., Kong, H. J., Cho, J., Chang, H., Kim, S., & Hong, K. Y. (2025). Aesthetic Surgery Journal, sjaf220.</span>
-							<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/41168671/">Publication</a></div>
-							<div><b class="text-dark">Tech Stack: </b>Deep Learning, Medical Image Processing</div>
-								<p>Multi-institutional model development and validation study for breast implant classification using deep learning</p>
+								<div class="mb-1">
+									<span class="badge" style="background-color: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 4px;">Q1</span>
+									<span class="badge" style="background-color: #ffc107; color: #212529; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 4px;"><span class="lang-en">Top 10%</span><span class="lang-ko">상위 10%</span></span>
+									<span class="badge badge-primary" style="background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em;"><span class="lang-en">1st Author</span><span class="lang-ko">1저자</span></span>
+								</div>
+								<span class="position"><strong>Jeong, S.</strong> (1저자), Yoo, H., Kong, H. J., Cho, J., Chang, H., Kim, S., & Hong, K. Y. (2026). Aesthetic Surgery Journal, sjaf220.</span>
+								<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/41168671/"><span class="lang-en">Publication</span><span class="lang-ko">논문 보기</span></a></div>
+								<div><b class="text-dark"><span class="lang-en">Tech Stack: </span><span class="lang-ko">기술 스택: </span></b>Deep Learning, Medical Image Processing</div>
+								<p><span class="lang-en">Multi-institutional model development and validation study for breast implant classification using deep learning (ranked #1 in Plastic Surgery).</span><span class="lang-ko">딥러닝을 활용한 유방 보형물 분류를 위한 다기관 모델 개발 및 검증 연구입니다 (성형외과 분야 저널 순위 1위).</span></p>
 							</div>
 						</div>
 
@@ -401,11 +460,14 @@
 								<div class="d-flex">
 									<h2>Machine-learning-based Models for Post-cervical Spinal Laminoplasty Outpatient Follow-up</h2>
 								</div>
-								<div><span class="badge badge-primary" style="background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-bottom: 5px;">1저자</span></div>
+								<div class="mb-1">
+									<span class="badge" style="background-color: #6c757d; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 4px;">Q2</span>
+									<span class="badge badge-primary" style="background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em;"><span class="lang-en">1st Author</span><span class="lang-ko">1저자</span></span>
+								</div>
 								<span class="position">Seo, Y., <strong>Jeong, S.</strong> (1저자), Lee, S., Kim, T. S., Kim, J. H., Chung, C. K., ... & Kim, C. H. (2024). BMC Medical Informatics and Decision Making, 24(1), 278.</span>
-								<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://bmcmedinformdecismak.biomedcentral.com/">Publication</a></div>
-								<div><b class="text-dark">Tech Stack: </b>Python, PyTorch, TensorFlow</div>
-								<p>Development and publication of prediction machine learning model for outpatient visits after neurosurgery</p>
+								<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://doi.org/10.1186/s12911-024-02693-y"><span class="lang-en">Publication</span><span class="lang-ko">논문 보기</span></a></div>
+								<div><b class="text-dark"><span class="lang-en">Tech Stack: </span><span class="lang-ko">기술 스택: </span></b>Python, PyTorch, TensorFlow</div>
+								<p><span class="lang-en">Development and publication of a machine learning prediction model for optimizing outpatient follow-up schedules after cervical spinal laminoplasty.</span><span class="lang-ko">경추 척추후궁성형술 후 외래 추적관찰 일정 최적화를 위한 머신러닝 예측 모델을 개발하고 발표한 연구입니다.</span></p>
 							</div>
 						</div>
 
@@ -419,9 +481,9 @@
 									<h2>Validation of Data Mining Models for Dental Age Estimation in Korean Juveniles and Young Adults</h2>
 								</div>
 							<span class="position">Kumagai, A., Jeong, S., Kim, D., Kong, H. J., Oh, S., & Lee, S. S. (2023). Scientific Reports, 13(1), 726.</span>
-							<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://www.nature.com/articles/s41598-023-28086-1">Publication</a></div>
-							<div><b class="text-dark">Tech Stack: </b>Data Mining, Machine Learning</div>
-								<p>Validation of data mining models by comparing with conventional methods for dental age estimation</p>
+							<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank" href="https://www.nature.com/articles/s41598-023-28086-1"><span class="lang-en">Publication</span><span class="lang-ko">논문 보기</span></a></div>
+							<div><b class="text-dark"><span class="lang-en">Tech Stack: </span><span class="lang-ko">기술 스택: </span></b>Data Mining, Machine Learning</div>
+								<p><span class="lang-en">Validation of data mining models by comparing with conventional methods for dental age estimation.</span><span class="lang-ko">기존 방법과의 비교를 통해 치아 연령 추정을 위한 데이터마이닝 모델을 검증한 연구입니다.</span></p>
 							</div>
 						</div>
 
@@ -727,6 +789,19 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var btn = document.getElementById('lang-toggle-btn');
+			var label = document.getElementById('lang-toggle-label');
+			if (!btn) return;
+			btn.addEventListener('click', function (e) {
+				e.preventDefault();
+				var isKo = document.body.classList.toggle('lang-mode-ko');
+				if (label) label.textContent = isKo ? 'English' : '한국어';
+			});
+		});
+	</script>
 
 </body>
 
