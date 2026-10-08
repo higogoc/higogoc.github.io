@@ -1,0 +1,301 @@
+/* ==========================================================================
+   Site-specific additions on top of the Academic Pages theme.
+   Everything here uses the theme's own CSS custom properties, so it follows
+   the light/dark theme automatically.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Badges — Q1, 1st Author, International, prizes, ...
+   -------------------------------------------------------------------------- */
+
+.badge-row {
+  display: inline;
+  margin-left: 0.3em;
+}
+
+.ap-badge {
+  display: inline-block;
+  padding: 0 0.5em;
+  margin: 0 0.25em 0.25em 0;
+  border: 1px solid var(--global-border-color);
+  border-radius: 3px;
+  font-size: 0.68em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: 0.18em;
+  color: var(--global-text-color-light);
+  background: transparent;
+}
+
+.ap-badge--accent {
+  color: var(--global-link-color);
+  border-color: var(--global-link-color);
+}
+
+.ap-badge--strong {
+  color: var(--global-bg-color);
+  background: var(--global-link-color);
+  border-color: var(--global-link-color);
+}
+
+/* --------------------------------------------------------------------------
+   Data-driven entry lists (publications, awards, talks, CV rows)
+   Mirrors the theme's .archive__item spacing.
+   -------------------------------------------------------------------------- */
+
+.ap-entry {
+  margin-bottom: 1.6em;
+}
+
+.ap-entry__title {
+  margin: 0 0 0.2em;
+  font-size: $type-size-5;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.ap-entry__meta {
+  margin: 0 0 0.25em;
+  font-size: 0.85em;
+  color: var(--global-text-color-light);
+}
+
+.ap-entry__meta em {
+  color: var(--global-text-color);
+}
+
+.ap-entry__authors {
+  margin: 0 0 0.25em;
+  font-size: 0.85em;
+  color: var(--global-text-color-light);
+}
+
+.ap-entry__authors strong {
+  color: var(--global-text-color);
+}
+
+.ap-entry__desc {
+  margin: 0.35em 0 0;
+  font-size: 0.88em;
+  color: var(--global-text-color-light);
+}
+
+.ap-entry__links {
+  margin: 0.35em 0 0;
+  font-size: 0.85em;
+}
+
+.ap-entry__links a + a::before {
+  content: " | ";
+  color: var(--global-text-color-light);
+}
+
+/* Date-led rows: awards, talks, service, CV */
+.ap-row {
+  display: grid;
+  grid-template-columns: 9.5em 1fr;
+  gap: 0 1.2em;
+  margin-bottom: 1.3em;
+}
+
+.ap-row--narrow {
+  grid-template-columns: 5.5em 1fr;
+}
+
+.ap-row__date {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--global-text-color-light);
+  padding-top: 0.15em;
+}
+
+.ap-row__title {
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.15em;
+}
+
+.ap-row__org {
+  font-size: 0.87em;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.2em;
+}
+
+.ap-row__detail {
+  font-size: 0.85em;
+  color: var(--global-text-color-light);
+}
+
+.ap-row__detail strong,
+.ap-row__detail b {
+  color: var(--global-text-color);
+}
+
+.ap-row__detail ul {
+  margin: 0.2em 0;
+  padding-left: 1.1em;
+}
+
+/* --------------------------------------------------------------------------
+   Research themes (home page)
+   -------------------------------------------------------------------------- */
+
+.ap-theme {
+  margin-bottom: 1.5em;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.ap-theme:last-child {
+  border-bottom: 0;
+}
+
+.ap-theme__title {
+  margin: 0 0 0.25em;
+  font-size: $type-size-4;
+  font-weight: 700;
+}
+
+.ap-theme__summary {
+  margin: 0 0 0.5em;
+  font-size: 0.92em;
+}
+
+.ap-theme ul {
+  margin: 0.3em 0 0.6em;
+  padding-left: 1.2em;
+  font-size: 0.88em;
+  color: var(--global-text-color-light);
+}
+
+/* --------------------------------------------------------------------------
+   Keyword chips & news list
+   -------------------------------------------------------------------------- */
+
+.ap-chips {
+  margin: 0 0 1.2em;
+  padding: 0;
+  list-style: none;
+}
+
+.ap-chips li {
+  display: inline-block;
+  margin: 0 0.3em 0.3em 0;
+  padding: 0.1em 0.7em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  font-size: 0.78em;
+  color: var(--global-text-color-light);
+}
+
+.ap-news {
+  display: grid;
+  grid-template-columns: 5.5em 1fr;
+  gap: 0.1em 1.2em;
+  font-size: 0.9em;
+}
+
+.ap-news__date {
+  font-weight: 600;
+  color: var(--global-text-color-light);
+  padding-top: 0.1em;
+}
+
+.ap-news__body {
+  margin-bottom: 0.7em;
+  color: var(--global-text-color-light);
+}
+
+.ap-news__tag {
+  display: inline-block;
+  margin-right: 0.45em;
+  font-size: 0.82em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--global-link-color);
+}
+
+/* --------------------------------------------------------------------------
+   Stats (Beyond Research)
+   -------------------------------------------------------------------------- */
+
+.ap-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin-bottom: 1.6em;
+  padding: 0;
+  list-style: none;
+}
+
+.ap-stats li {
+  flex: 1 1 10em;
+  padding: 0.9em 1.1em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+}
+
+.ap-stats .value {
+  display: block;
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--global-link-color);
+}
+
+.ap-stats .label {
+  display: block;
+  font-size: 0.82em;
+  color: var(--global-text-color-light);
+}
+
+/* --------------------------------------------------------------------------
+   Skills grid (CV page)
+   -------------------------------------------------------------------------- */
+
+.ap-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
+  gap: 1.2em 1.6em;
+  margin-bottom: 1.5em;
+}
+
+.ap-skills h4 {
+  margin: 0 0 0.3em;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.ap-skills ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88em;
+}
+
+/* --------------------------------------------------------------------------
+   Narrow screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 37.5em) {
+  .ap-row,
+  .ap-row--narrow,
+  .ap-news {
+    grid-template-columns: 1fr;
+    gap: 0.1em;
+  }
+
+  .ap-row {
+    margin-bottom: 1.5em;
+  }
+
+  .ap-news__date {
+    margin-top: 0.6em;
+  }
+}

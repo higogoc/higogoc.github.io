@@ -1,70 +1,47 @@
-<p align="center">
-  <h1 align="center">Developer's Portfolio ✨</h1>
+<h1 align="center">higogoc.github.io</h1>
 
-  <p align="center">
-Profolio는 개발자를 위한, 쉽고 빠르게 제작 할 수 있는 정적 포트폴리오 템플릿 입니다. <br/>Github 페이지로 호스팅 됩니다. <br/>웹 사이트는 <a href="https://congchu.github.io/web-porfolio/">DEMO</a>에서 확인하실 수 있습니다.
-  <br/>
-  <br/> 더 많은 템플릿은 <a href="https://github.com/congchu/portfolio-collection" >portfolio-collection</a> 저장소에서 보실 수 있습니다.
-    <br/>
-    <br/>
-    <img src="https://img.shields.io/badge/-Bootstrap-05122A?style=flat&logo=bootstrap&logoColor=563D7C"/>
-    <img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6"/>
-    <img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5"/>
-  <br/>
-  <br/>
-  <img src="https://github.com/congchu/web-porfolio/blob/main/demo/20210428.gif?raw=true"/>
+<p align="center">
+  Academic site for <b>Seoi Jeong</b> — AI &amp; XR Researcher, Seoul National University Hospital.
+  <br>
+  <a href="https://higogoc.github.io/">higogoc.github.io</a>
 </p>
 
-## Overview ⭐️
+---
 
-- static website로 Github pages 활용한 웹 호스팅 가능
-- 개발자 맞춤형 포트폴리오 웹 페이지
-- 제작자 표기 시, 무료로 활용가능
+Built with [Academic Pages](https://github.com/academicpages/academicpages.github.io),
+a Jekyll template. GitHub Pages builds and publishes it automatically on every
+push to `main` — there is no build step to run by hand.
 
-## Prerequisites 🍪
+## Layout
 
-- PC에 git이 설치되어 있어야하며, Github 계정이 있어야 합니다.
-- HTML 문법을 몰라도 텍스트만 교체하여 활용 가능합니다.
-- HTML 문법을 알면 레이아웃이나 디자인을 변경할 수 있습니다.
-- CSS를 몰라도 제작 가능하지만, CSS에 친숙하다면 디자인도 자유롭게 변경할 수 있습니다.
+| Path | What it is |
+|---|---|
+| `_data/*.yml` | All content — profile, news, research, publications, awards, talks, service, patents, experience, education, skills, beyond |
+| `_pages/` | One file per page: `/`, `/publications/`, `/awards/`, `/cv/`, `/beyond/`, `/talks/` |
+| `_config.yml` | Site settings and the sidebar author block |
+| `_sass/_custom.scss` | Site-specific styling on top of the theme |
+| `_includes/`, `_layouts/`, `assets/` | Stock Academic Pages theme |
 
-## Setup And Deployment 🔧
+## Updating
 
-1. 내 프로젝트로 Fork합니다.
-2. repository를 clone하여 로컬로 내려받습니다.
+Edit the relevant file in `_data/` and commit. That is enough — the live site
+rebuilds on its own.
 
-   ```
-   git clone {저장소URL}
-   ```
-
-3. 내용을 원하는대로 수정합니다.
-4. github commit & push 합니다.
+To preview locally (needs Ruby):
 
 ```bash
-git commit -m 'initial project'
-git push - u origin master
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
-6. github Settings에서 pages로 이동하여, Source를 main branch로 바꿔줍니다.
-7. publish 되었다는 URL로 접속하여 확인합니다 (시간이 좀 걸리니, 5분정도 기다려주세요)
+Then open <http://localhost:4000>.
 
-## Documentation 📑
+See **[MAINTENANCE.md](MAINTENANCE.md)** for the schema of every data file and a
+suggested update rhythm.
 
-튜토리얼 문서는 [웹 포트폴리오 제작 튜토리얼](https://www.notion.so/cucus/85e3bec77d904f1fa282cec4756232c3)에서 확인해주세요.
+## Credits
 
-## Deploy History 🌳
-
-2021-12-28
-
-- 지킬 셋팅 제거
-- 커스텀 도메인 연결 제거
-- 데모 사이트 및 이미지 경로 변경
-
-2021-04-22
-
-- 전체 레이아웃 수정
-- header 사진 변경
-
-2021-04-20
-
-- 프로젝트 생성
+[Academic Pages](https://github.com/academicpages/academicpages.github.io) by
+the Academic Pages contributors, forked from the
+[Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) Jekyll theme
+by Michael Rose. Both MIT licensed.

@@ -1,0 +1,67 @@
+---
+layout: archive
+title: "Talks and Service"
+permalink: /talks/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% if site.data.talks and site.data.talks.size > 0 %}
+<h2>Invited Talks and Presentations</h2><hr />
+{% for talk in site.data.talks %}
+<div class="ap-row ap-row--narrow">
+  <div class="ap-row__date">{{ talk.date }}</div>
+  <div>
+    <div class="ap-row__title">{{ talk.title }}{% include badges.html list=talk.badges %}</div>
+    {% if talk.venue %}<div class="ap-row__org">{{ talk.venue }}</div>{% endif %}
+    {% if talk.detail or talk.links %}
+    <div class="ap-row__detail">
+      {{- talk.detail -}}
+      {%- if talk.links %}
+      <p class="ap-entry__links">
+        {%- for link in talk.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
+      </p>
+      {%- endif %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% if site.data.service and site.data.service.size > 0 %}
+<h2>Professional Service</h2><hr />
+{% for item in site.data.service %}
+<div class="ap-row">
+  <div class="ap-row__date">{{ item.period }}</div>
+  <div>
+    <div class="ap-row__title">{{ item.role }}</div>
+    {% if item.org %}<div class="ap-row__org">{{ item.org }}</div>{% endif %}
+    {% if item.detail %}<div class="ap-row__detail">{{ item.detail }}</div>{% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% if site.data.patents and site.data.patents.size > 0 %}
+<h2>Patents</h2><hr />
+{% for patent in site.data.patents %}
+<div class="ap-row ap-row--narrow">
+  <div class="ap-row__date">{{ patent.date }}</div>
+  <div>
+    <div class="ap-row__title">{{ patent.title }}</div>
+    {% if patent.status %}<div class="ap-row__org">{{ patent.status }}</div>{% endif %}
+    <div class="ap-row__detail">
+      {%- if patent.number %}<b>No.:</b> {{ patent.number }}{% endif -%}
+      {%- if patent.inventors %}<br><b>Inventors:</b> {{ patent.inventors | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif -%}
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% assign total = site.data.talks.size | plus: site.data.service.size | plus: site.data.patents.size %}
+{% if total == 0 %}
+<p>Nothing listed here yet.</p>
+{% endif %}

@@ -1,0 +1,27 @@
+---
+layout: archive
+title: "Honors and Awards"
+permalink: /awards/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for award in site.data.awards %}
+<div class="ap-row ap-row--narrow">
+  <div class="ap-row__date">{{ award.date }}</div>
+  <div>
+    <div class="ap-row__title">{{ award.title }}{% if award.scope %}{% assign scope_list = award.scope | split: "," %}{% include badges.html list=scope_list %}{% endif %}</div>
+    {% if award.org %}<div class="ap-row__org">{{ award.org }}</div>{% endif %}
+    <div class="ap-row__detail">
+      {%- if award.project %}<b>Project:</b> {{ award.project }}{% endif -%}
+      {%- if award.team %}<br><b>Team:</b> {{ award.team | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif -%}
+      {%- if award.links %}
+      <p class="ap-entry__links">
+        {%- for link in award.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
+      </p>
+      {%- endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,13 @@
+# Edited by hand. Jekyll reads this as site.data.beyond
+# See MAINTENANCE.md for the field reference.
+intro: Work that sits outside the publication record but shapes how I approach it.
+stats:
+  - value: 500+
+    label: Hours of volunteer service
+groups:
+  - title: Volunteering
+    items: []
+  - title: Giving
+    items: []
+  - title: Athletics
+    items: []

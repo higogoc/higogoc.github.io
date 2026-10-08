@@ -1,0 +1,49 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</div>
+{% endif %}
+
+{% include base_path %}
+
+{% assign groups = "journal,conference" | split: "," %}
+{% assign headings = "Journal Articles,Conference and Proceedings" | split: "," %}
+
+{% for group in groups %}
+  {% assign entries = site.data.publications[group] %}
+  {% if entries and entries.size > 0 %}
+    <h2>{{ headings[forloop.index0] }}</h2><hr />
+    {% assign years = entries | group_by: "year" | sort: "name" | reverse %}
+    {% for year in years %}
+      <h3>{{ year.name }}</h3>
+      {% for pub in year.items %}
+      <div class="ap-entry">
+        {% include badges.html list=pub.badges %}
+        <h4 class="ap-entry__title">
+          {%- if pub.links and pub.links.size > 0 -%}
+            <a href="{{ pub.links[0].href }}">{{ pub.title }}</a>
+          {%- else -%}
+            {{ pub.title }}
+          {%- endif -%}
+        </h4>
+        <p class="ap-entry__authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+        <p class="ap-entry__meta">
+          {%- if pub.venue %}Published in <em>{{ pub.venue }}</em>, {{ pub.year }}{% else %}{{ pub.year }}{% endif -%}
+          {%- if pub.venue_detail %} &middot; {{ pub.venue_detail }}{% endif -%}
+        </p>
+        {% if pub.desc %}<p class="ap-entry__desc">{{ pub.desc }}</p>{% endif %}
+        {% if pub.links and pub.links.size > 0 %}
+        <p class="ap-entry__links">
+          {%- for link in pub.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
+        </p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}

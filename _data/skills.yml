@@ -1,0 +1,27 @@
+# Edited by hand. Jekyll reads this as site.data.skills
+# See MAINTENANCE.md for the field reference.
+- group: Languages
+  items:
+    - Korean (Native)
+    - English (Academic)
+- group: Programming
+  items:
+    - Python
+    - "C#"
+    - C++
+    - JavaScript
+    - PHP
+- group: Deep Learning
+  items:
+    - PyTorch
+    - TensorFlow
+    - CUDA
+- group: "XR & Applications"
+  items:
+    - "Unity (C#)"
+    - Apple Vision Pro / visionOS
+    - React Native
+- group: Data
+  items:
+    - MySQL
+    - MariaDB

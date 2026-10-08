@@ -1,0 +1,76 @@
+---
+layout: archive
+title: "CV"
+permalink: /cv/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p><a href="https://1drv.ms/b/s!Arq-JhppjNaold8YWKk1SIU70RF5Aw?e=GyS13B">Download the full CV as a PDF</a>.</p>
+
+{% if site.data.experience and site.data.experience.size > 0 %}
+<h2>Experience</h2><hr />
+{% for item in site.data.experience %}
+<div class="ap-row">
+  <div class="ap-row__date">{{ item.period }}</div>
+  <div>
+    <div class="ap-row__title">{{ item.title }}{% include badges.html list=item.badges %}</div>
+    <div class="ap-row__org">
+      {{- item.org -}}
+      {%- if item.location %} &middot; {{ item.location }}{% endif -%}
+    </div>
+    {% if item.details %}
+    <div class="ap-row__detail">
+      <ul>
+      {%- for detail in item.details %}
+        <li>{{ detail }}</li>
+      {%- endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% if site.data.education and site.data.education.size > 0 %}
+<h2>Education</h2><hr />
+{% for item in site.data.education %}
+<div class="ap-row">
+  <div class="ap-row__date">{{ item.period }}</div>
+  <div>
+    <div class="ap-row__title">{{ item.title }}{% include badges.html list=item.badges %}</div>
+    <div class="ap-row__org">
+      {{- item.org -}}
+      {%- if item.location %} &middot; {{ item.location }}{% endif -%}
+    </div>
+    {% if item.details %}
+    <div class="ap-row__detail">
+      <ul>
+      {%- for detail in item.details %}
+        <li>{{ detail }}</li>
+      {%- endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{% if site.data.skills and site.data.skills.size > 0 %}
+<h2>Skills</h2><hr />
+<div class="ap-skills">
+{%- for group in site.data.skills %}
+  <div>
+    <h4>{{ group.group }}</h4>
+    <ul>
+    {%- for item in group.items %}
+      <li>{{ item }}</li>
+    {%- endfor %}
+    </ul>
+  </div>
+{%- endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,19 @@
+# Order of the links in the masthead.
+# Removing a link hides it from the header but does not delete the page.
+
+main:
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Awards"
+    url: /awards/
+
+  # Uncomment once _data/talks.yml, service.yml, or patents.yml has entries.
+  # - title: "Talks & Service"
+  #   url: /talks/
+
+  - title: "CV"
+    url: /cv/
+
+  - title: "Beyond Research"
+    url: /beyond/
