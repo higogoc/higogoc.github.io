@@ -21,25 +21,25 @@ author_profile: true
 
 {% for group in beyond.groups %}
   {% if group.items and group.items.size > 0 %}
-  <h2>{{ group.title }}</h2><hr />
+<h2>{{ group.title }}</h2><hr />
   {% for item in group.items %}
-  <div class="ap-row ap-row--narrow">
-    <div class="ap-row__date">{{ item.period }}</div>
-    <div>
-      <div class="ap-row__title">{{ item.title }}</div>
-      {% if item.org %}<div class="ap-row__org">{{ item.org }}</div>{% endif %}
-      {% if item.detail or item.links %}
-      <div class="ap-row__detail">
-        {{- item.detail | markdownify | remove: "<p>" | remove: "</p>" | strip -}}
-        {%- if item.links %}
-        <p class="ap-entry__links">
-          {%- for link in item.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
-        </p>
-        {%- endif %}
-      </div>
-      {% endif %}
+<div class="ap-row ap-row--narrow">
+  <div class="ap-row__date">{{ item.period }}</div>
+  <div>
+    <div class="ap-row__title">{{ item.title }}</div>
+    {% if item.org %}<div class="ap-row__org">{{ item.org }}</div>{% endif %}
+    {% if item.detail or item.links %}
+    <div class="ap-row__detail">
+      {{- item.detail | markdownify | remove: "<p>" | remove: "</p>" | strip -}}
+      {%- if item.links %}
+      <p class="ap-entry__links">
+        {%- for link in item.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
+      </p>
+      {%- endif %}
     </div>
+    {% endif %}
   </div>
+</div>
   {% endfor %}
   {% endif %}
 {% endfor %}

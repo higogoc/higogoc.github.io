@@ -1,124 +1,54 @@
 # Edited by hand. Jekyll reads this as site.data.awards
-# See MAINTENANCE.md for the field reference.
-- date: '2025.12'
-  title: Grand Prize
-  scope: domestic
-  org: Capstone Design Competition
-  project: Home-based Pre-consultation System for Improving Allergy Clinic Outpatient Efficiency
+# Honors where Seoi Jeong led the work, plus ministry-level domestic awards.
+# Challenge and competition results live in _data/publications.yml (challenge).
+# scope -> rendered bold after the title. **double asterisks** render as bold.
+- date: "2025.12"
+  title: "Grand Prize"
+  scope: "Domestic"
+  org: "Capstone Design Competition"
+  project: "Home-based Pre-consultation System for Improving Allergy Clinic Outpatient Efficiency"
   team: "**Jeong, S.**"
-- date: '2025.11'
-  title: IITP Director's Award (2nd Place)
-  scope: domestic
-  org: "Ministry of Science and ICT, IITP &mdash; 2025 Global Data Convergence Leader Program Outcome\
-    \ Sharing"
-  project: Development of an LLM-based Non-face-to-face Pre-consultation System for Allergy Clinics
+
+- date: "2025.11"
+  title: "IITP Director's Award (2nd Place)"
+  scope: "Domestic"
+  org: "Ministry of Science and ICT, IITP &mdash; 2025 Global Data Convergence Leader Program Outcome Sharing"
+  project: "Development of an LLM-based Non-face-to-face Pre-consultation System for Allergy Clinics"
   team: "**Jeong, S.**"
-- date: '2025.09'
-  title: "1st Prize &mdash; Emergency Procedure Hand Tracking Task"
-  scope: international
-  org: MICCAI 2025 Trauma THOMPSON Challenge
-  project: "Task 2: Emergency Procedure Hand Tracking"
-  team: "Choi, D. H., **Jeong, S.**, Lim, E. J., Lee, W. J., Park, T. J., Lee, K. E., Kong, H. J."
-- date: '2025.09'
-  title: "2nd Place &mdash; OSATS Task"
-  scope: international
-  org: MICCAI 2025 Endoscopic Vision Challenge
-  project: "Open Suturing Skills Task 2: OSATS Score Classification"
-  team: "Hong, S. J., Park, J. E., Shin, S. Y., Kang, D. H., Kong, Y., **Jeong, S.**, Lee, K. E., Kong,\
-    \ H. J."
-- date: '2025.09'
-  title: "2nd Place &mdash; Tracking Task"
-  scope: international
-  org: MICCAI 2025 Endoscopic Vision Challenge
-  project: "Open Suturing Skills Task 3: Hand &amp; Tool Tracking"
-  team: "Kang, D. H., Park, J. E., Shin, S. Y., Hong, S. J., Kong, Y., **Jeong, S.**, Lee, K. E., Kong,\
-    \ H. J."
-- date: '2025.09'
-  title: Best Poster Award
-  scope: domestic
-  org: 2025 Korean Society of Medical Metaverse Fall Conference
-  project: Development of a Deep Learning Model for Quantitative Evaluation of the K-MMSE Three-Stage
-    Command Task in a Mixed Reality Environment Using Egocentric View Data
-  team: "Cho, Y. B., **Jeong, S.**"
-- date: '2025.06'
-  title: Excellent Poster Award
-  scope: domestic
-  org: 2025 Korean Society of Medical Informatics Spring Conference
-  project: A Study on Developing an LLM-based Standardization System for Medical Insurance Document Names
-  team: "Choi, D. H., Kim, S. M., **Jeong, S.**, Kong, H. J."
-- date: '2025.04'
-  title: Best Poster Award
-  scope: domestic
-  org: 2025 Korean Society of Medical Metaverse Spring Conference
-  project: "Developing an Immersive Virtual Reality System for Intraoperative Contactless Surgical Remote\
-    \ Consent Services: A Pilot Study of User Experience"
-  team: "Min, Y. E., **Jeong, S.**, Joo, H. J., Yoon, J. K., Kim, H. Y., Lee, K. E., Kong, H. J."
-- date: '2024.11'
-  title: Excellent Poster Award
-  scope: domestic
-  org: 2024 Korean Society of Medical Informatics Fall Conference
-  project: Development and Validation of a Time-series Deep Learning Model for Predicting Problem Behaviors
-    in Children with Autism Spectrum Disorder Using Wearable Sensors
+
+- date: "2024.11"
+  title: "Excellent Poster Award"
+  scope: "Domestic"
+  org: "2024 Korean Society of Medical Informatics Fall Conference"
+  project: "Development and Validation of a Time-series Deep Learning Model for Predicting Problem Behaviors in Children with Autism Spectrum Disorder Using Wearable Sensors"
   team: "**Jeong, S.**, Kim, A. R., Jang, S. M., Kim, J. M., Jung, E. J., Kim, B. N., Kong, H. J."
-- date: '2024.10'
-  title: Merit Award
-  scope: domestic
+
+- date: "2024.10"
+  title: "Merit Award"
+  scope: "Domestic"
   org: "Ministry of Science and ICT &mdash; 2024 Metaverse Developer Contest"
-  project: Development of an MR Environment Application for Apple Vision Pro
+  project: "Development of an MR Environment Application for Apple Vision Pro"
   team: "Kim, K. T., **Jeong, S.**, Kim, J. H., Yoon, Y. J., Won, D. B."
   links:
-    - label: Demo video
-      href: "https://www.youtube.com/watch?v=pq7KXzPXDC4"
-- date: '2024.09'
-  title: Best Presentation Award (New Trainee Category)
-  scope: domestic
+    - { label: "Demo video", href: "https://www.youtube.com/watch?v=pq7KXzPXDC4" }
+
+- date: "2024.09"
+  title: "Best Presentation Award (New Trainee Category)"
+  scope: "Domestic"
   org: "SNUH Dept. of Transdisciplinary Medicine &mdash; 2024 Academic Festival"
-  project: "A Study on a Tablet-based Three-stage Respiratory Intervention System: Real-time Feedback\
-    \ and Adherence Improvement through Deep Learning and Gamification"
+  project: "A Study on a Tablet-based Three-stage Respiratory Intervention System: Real-time Feedback and Adherence Improvement through Deep Learning and Gamification"
   team: "**Jeong, S.**, Kim, J. H., Shin, J. H., Kim, H. Y., Kong, H. J."
-- date: '2024.07'
-  title: Excellent Paper Award
-  scope: domestic
-  org: 2024 Korean Institute of Information Technology (KIIT) Spring Conference
-  project: A Study on a Tablet-based Three-stage Respiratory Intervention System
-  team: "Kim, J. H., Shin, J. H., **Jeong, S.**, Kim, H. Y., Kong, H. J."
-- date: '2024.07'
-  title: Excellent Paper Award
-  scope: domestic
-  org: 2024 Korean Institute of Information Technology (KIIT) Spring Conference
-  project: "EEG-based Real-time Attention State Classification Machine Learning Model: Improving VR-based\
-    \ Medical Education Outcomes"
-  team: "Seo, Y. C., Choi, Y. J., Ji, H. S., **Jeong, S.**, Kong, H. J."
-- date: '2024.06'
-  title: Excellent Paper Award
-  scope: domestic
-  org: 2024 Korean Society of Medical Informatics Spring Conference
-  project: A Study on Improving a Deep Learning Classification Model Using High-resolution Inpainting-based
-    Ovarian Cyst Ultrasound Images
-  team: "Choi, D. H., **Jeong, S.**, Kong, H. J."
-- date: '2024.01'
-  title: Excellent Poster Award
-  scope: domestic
-  org: Korean CDE Society 2024 Winter Conference
-  project: Development of a Real-time Deep Learning Model for Predicting Pediatric Hypokalemia Based on
-    Wearable Single-channel ECG
+
+- date: "2024.01"
+  title: "Excellent Poster Award"
+  scope: "Domestic"
+  org: "Korean CDE Society 2024 Winter Conference"
+  project: "Development of a Real-time Deep Learning Model for Predicting Pediatric Hypokalemia Based on Wearable Single-channel ECG"
   team: "**Jeong, S.**, Shin, S. Y., Lee, S. H., Min, Y. E., Lee, H. J., Kang, H. K., Kong, H. J."
-- date: '2023.10'
-  title: Honorable Mention Award
-  scope: international
-  org: MICCAI 2023
-  project: Multi-organ and Pan-cancer Segmentation Framework from Partially Labeled Abdominal CT Datasets
-  team: "Kong, H. J., Kong, Y., Kim, K., **Jeong, S.**"
-- date: '2022.11'
-  title: Second Runner-up
-  scope: international
-  org: "National University of Singapore &mdash; 2022 Singapore Healthcare AI Datathon &amp; EXPO"
-  project: A Study on the Anesthetic Management Model Predicting the Increase of Anesthetic During Surgery
-    in Real-time
-  team: "Kong, H. J., Lee, H. C., **Jeong, S.**, Kim, H. S., Sim, D. Y., Lee, H. H."
-- date: '2021.12'
-  title: Innovation Award
-  scope: domestic
+
+- date: "2021.12"
+  title: "Innovation Award"
+  scope: "Domestic"
   org: "Seoul National University Hospital &mdash; 2021 SNUH-SPIRIT Innovation Award"
-  project: Development of an AI-based Fall Risk Factor Prediction Model
+  project: "Development of an AI-based Fall Risk Factor Prediction Model"
   team: "Kong, H. J., Ahn, S. H., **Jeong, S.**"

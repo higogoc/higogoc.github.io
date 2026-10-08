@@ -1,13 +1,34 @@
 # Edited by hand. Jekyll reads this as site.data.beyond
-# See MAINTENANCE.md for the field reference.
-intro: Work that sits outside the publication record but shapes how I approach it.
+# A group with an empty `items` list is skipped entirely.
+# **double asterisks** render as bold.
+intro: "Work that sits outside the publication record but shapes how I approach it."
+
 stats:
-  - value: 500+
-    label: Hours of volunteer service
+  - { value: "500+", label: "Hours of volunteer service" }
+
 groups:
-  - title: Volunteering
-    items: []
-  - title: Giving
-    items: []
-  - title: Athletics
+  - title: "Giving"
+    items:
+      - period: "2024"
+        title: "Donation to the Department of Transdisciplinary Medicine Development Fund"
+        org: "Seoul National University Hospital"
+        detail: "**KRW 1,500,000**, funded by the prize from the **2024 Metaverse Developer Contest** (Ministry of Science and ICT) together with personal funds, directed to education and research within the department."
+        links:
+          - { label: "Development fund", href: "https://dtm.snuh.org/fund" }
+
+  - title: "Volunteering"
+    items:
+      - period: "2016.10"
+        title: "Sori Angels (&#49548;&#47532;&#52380;&#49324;) student volunteer corps"
+        org: "2016 Jeonju International Sori Festival"
+        detail: "Stage setup and event operations across the festival run, alongside coursework. Featured in the Jeonbuk National University student newspaper."
+        links:
+          - { label: "Article", href: "https://www.jbpresscenter.com/news/articleView.html?idxno=6109" }
+
+      - period: "2016.07"
+        title: "Summer Overseas Volunteer Program, Vietnam"
+        org: "Jeonbuk National University"
+        detail: "Two weeks of overseas volunteer service."
+
+  - title: "Athletics"
     items: []

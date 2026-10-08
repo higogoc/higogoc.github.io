@@ -1,263 +1,173 @@
 # Edited by hand. Jekyll reads this as site.data.publications
-# See MAINTENANCE.md for the field reference.
+# Three lists: journal, conference (international only), challenge.
+# Entries are grouped by `year` automatically, so file order does not matter.
+#
+# metrics -> rendered bold in parentheses after the venue, e.g. (Q1, IF 5.1)
+# note    -> rendered bold at the end of the meta line, e.g. 1st Author
+# **double asterisks** render as bold inside author strings.
+
 journal:
   - year: 2026
-    title: Deep Learning Using Wearable Single-Lead ECG for Early Detection of Post-Thyroidectomy Hypocalcemia
-    authors: "Lee, S., **Jeong, S.**, Joo, H., Kong, Y., Lee, J. K., Kim, W., Yu, H. W., Kim, S., Chai,\
-      \ Y. J., Choi, J. Y., Kong, H. J., & Lee, K. E."
-    venue: Surgery
-    badges:
-      - q1
-      - first
-    links:
-      - label: Paper
-        href: "https://www.sciencedirect.com/science/article/pii/S0039606026005246"
-    tags:
-      - Deep Learning
-      - Wearable Biosignals
-    desc: Deep learning model using wearable single-lead ECG signals for early detection of hypocalcemia
-      following thyroidectomy, enabling continuous non-invasive postoperative monitoring.
+    title: "Machine Learning Models for Predicting Postoperative Complications and Length of Stay after Gastrectomy for Gastric Cancer Using the 2023 Korean Gastric Cancer Association Nationwide Survey Database"
+    authors: "Cho, Y. S., **Jeong, S.**, Kong, H. J.&dagger;, & Park, D. J.&dagger;"
+    venue: "Journal of Gastric Cancer"
+    venue_detail: "Accepted 7 Oct 2026"
+    metrics: "Q1, 32/153 in Gastroenterology &amp; Hepatology, IF 5.1"
+    note: "1st Author"
+    desc: "Machine learning models predicting postoperative complications and length of stay after gastrectomy, developed on the 2023 Korean Gastric Cancer Association nationwide survey database."
+
   - year: 2026
-    title: "Immersive Virtual Reality Training to Improve Novice Physicians' Emergency Response Skills:\
-      \ A Randomized Controlled Trial"
+    title: "Deep Learning Using Wearable Single-Lead ECG for Early Detection of Post-Thyroidectomy Hypocalcemia"
+    authors: "Lee, S., **Jeong, S.**, Joo, H., Kong, Y., Lee, J. K., Kim, W., Yu, H. W., Kim, S., Chai, Y. J., Choi, J. Y., Kong, H. J., & Lee, K. E."
+    venue: "Surgery"
+    metrics: "Q1"
+    note: "1st Author"
+    links:
+      - { label: "Paper", href: "https://www.sciencedirect.com/science/article/pii/S0039606026005246" }
+    desc: "Deep learning model using wearable single-lead ECG signals for early detection of hypocalcemia following thyroidectomy, enabling continuous non-invasive postoperative monitoring."
+
+  - year: 2026
+    title: "Immersive Virtual Reality Training to Improve Novice Physicians' Emergency Response Skills: A Randomized Controlled Trial"
     authors: "Huh, Y. J., Kim, J. W., Yoon, N., **Jeong, S.**, Kong, H. J., & Myung, S. J."
-    venue: JMIR Medical Education
-    venue_detail: "IF 13.9 &middot; ranked #1 of 89 in Education, Scientific Disciplines"
-    badges:
-      - q1
-      - top10
+    venue: "JMIR Medical Education"
+    metrics: "Q1, Top 10%, IF 13.9, ranked #1 of 89 in Education, Scientific Disciplines"
     links:
-      - label: Paper
-        href: "https://doi.org/10.2196/71455"
-    tags:
-      - Virtual Reality
-      - Medical Education
-    desc: Randomized controlled trial evaluating the effectiveness of immersive VR training for improving
-      emergency response skills in novice physicians.
+      - { label: "Paper", href: "https://doi.org/10.2196/71455" }
+    desc: "Randomized controlled trial evaluating the effectiveness of immersive VR training for improving emergency response skills in novice physicians."
+
   - year: 2026
-    title: "Metaverse-based Objective Structured Clinical Examinations: An Exploratory Approach to Advancing\
-      \ Clinical Competency Assessment"
-    authors: "Huh, Y. J., Shin, J. S., Yoon, N., Kim, J. W., Kim, D. H., Kim, C., **Jeong, S.**, Yoon,\
-      \ Y., Shin, S., Kong, H. J., & Myung, S. J."
-    venue: Korean Journal of Medical Education
-    badges:
-      - q2
-    links:
-      - label: Paper
-        href: "https://doi.org/10.3946/kjme.2025.151"
-    tags:
-      - Metaverse
-      - Medical Education
-    desc: Exploratory study evaluating a metaverse-based objective structured clinical examination (OSCE)
-      platform as a new approach for assessing clinical competency.
-  - year: 2026
-    title: Deep Learning Model for Identification of Metabolic Bone Disease of Prematurity Using Wrist
-      Radiographs
-    authors: "Park, S. G., **Jeong, S.**, Cho, M., Kim, M. J., Choi, C. W., Kim, E. K., Cheon, J. E.,\
-      \ & Kong, H. J."
-    venue: Scientific Reports
-    badges:
-      - q1
-      - first
-    links:
-      - label: Paper
-        href: "https://doi.org/10.1038/s41598-026-37116-7"
-    tags:
-      - Deep Learning
-      - Medical Image Processing
-    desc: Deep learning model for identification of metabolic bone disease of prematurity from wrist radiographs,
-      developed and validated on clinical data.
-  - year: 2026
-    title: Deep Learning-based Model for Breast Implant Classification in Ultrasonography
+    title: "Deep Learning-based Model for Breast Implant Classification in Ultrasonography: A Multi-Institutional Model Development and Validation Study"
     authors: "Yoo, H., **Jeong, S.**, Kong, H. J., Cho, J., Chang, H., Kim, S., & Hong, K. Y."
-    venue: Aesthetic Surgery Journal
-    venue_detail: "sjaf220 &middot; ranked #1 in Plastic Surgery"
-    badges:
-      - q1
-      - top10
-      - first
+    venue: "Aesthetic Surgery Journal"
+    venue_detail: "sjaf220"
+    metrics: "Q1, Top 10%, ranked #1 in Plastic Surgery"
+    note: "1st Author"
     links:
-      - label: Paper
-        href: "https://pubmed.ncbi.nlm.nih.gov/41168671/"
-    tags:
-      - Deep Learning
-      - Medical Image Processing
-    desc: Multi-institutional model development and validation study for breast implant classification
-      using deep learning.
+      - { label: "Paper", href: "https://pubmed.ncbi.nlm.nih.gov/41168671/" }
+    desc: "Multi-institutional model development and validation study for breast implant classification using deep learning."
+
+  - year: 2026
+    title: "Deep Learning Model for Identification of Metabolic Bone Disease of Prematurity Using Wrist Radiographs"
+    authors: "Park, S. G., **Jeong, S.**, Cho, M., Kim, M. J., Choi, C. W., Kim, E. K., Cheon, J. E., & Kong, H. J."
+    venue: "Scientific Reports"
+    metrics: "Q1"
+    note: "1st Author"
+    links:
+      - { label: "Paper", href: "https://doi.org/10.1038/s41598-026-37116-7" }
+    desc: "Deep learning model for identification of metabolic bone disease of prematurity from wrist radiographs, developed and validated on clinical data."
+
+  - year: 2026
+    title: "Metaverse-based Objective Structured Clinical Examinations: An Exploratory Approach to Advancing Clinical Competency Assessment"
+    authors: "Huh, Y. J., Shin, J. S., Yoon, N., Kim, J. W., Kim, D. H., Kim, C., **Jeong, S.**, Yoon, Y., Shin, S., Kong, H. J., & Myung, S. J."
+    venue: "Korean Journal of Medical Education"
+    metrics: "Q2"
+    links:
+      - { label: "Paper", href: "https://doi.org/10.3946/kjme.2025.151" }
+    desc: "Exploratory study evaluating a metaverse-based objective structured clinical examination (OSCE) platform as a new approach for assessing clinical competency."
+
   - year: 2024
-    title: Machine-learning-based Models for Post-cervical Spinal Laminoplasty Outpatient Follow-up
+    title: "Machine-learning-based Models for Post-cervical Spinal Laminoplasty Outpatient Follow-up"
     authors: "Seo, Y., **Jeong, S.**, Lee, S., Kim, T. S., Kim, J. H., Chung, C. K., ... & Kim, C. H."
-    venue: BMC Medical Informatics and Decision Making
-    venue_detail: 24(1), 278
-    badges:
-      - q2
-      - first
+    venue: "BMC Medical Informatics and Decision Making"
+    venue_detail: "24(1), 278"
+    metrics: "Q2"
+    note: "1st Author"
     links:
-      - label: Paper
-        href: "https://doi.org/10.1186/s12911-024-02693-y"
-    tags:
-      - Machine Learning
-      - Clinical Decision Support
-    desc: Machine learning prediction model for optimizing outpatient follow-up schedules after cervical
-      spinal laminoplasty.
+      - { label: "Paper", href: "https://doi.org/10.1186/s12911-024-02693-y" }
+    desc: "Machine learning prediction model for optimizing outpatient follow-up schedules after cervical spinal laminoplasty."
+
   - year: 2023
-    title: Validation of Data Mining Models for Dental Age Estimation in Korean Juveniles and Young Adults
+    title: "Validation of Data Mining Models for Dental Age Estimation in Korean Juveniles and Young Adults"
     authors: "Kumagai, A., **Jeong, S.**, Kim, D., Kong, H. J., Oh, S., & Lee, S. S."
-    venue: Scientific Reports
-    venue_detail: 13(1), 726
-    badges: []
+    venue: "Scientific Reports"
+    venue_detail: "13(1), 726"
     links:
-      - label: Paper
-        href: "https://www.nature.com/articles/s41598-023-28086-1"
-    tags:
-      - Data Mining
-      - Machine Learning
-    desc: Validation of data mining models for dental age estimation against conventional methods.
+      - { label: "Paper", href: "https://www.nature.com/articles/s41598-023-28086-1" }
+    desc: "Validation of data mining models for dental age estimation against conventional methods."
+
 conference:
   - year: 2026
-    title: "Immersive Virtual Reality Training to Improve Novice Physicians' Emergency Response Skills:\
-      \ A Randomized Controlled Trial"
+    title: "Immersive Virtual Reality Training to Improve Novice Physicians' Emergency Response Skills: A Randomized Controlled Trial"
     authors: "Huh, Y. J., Kim, J. W., Yoon, N., **Jeong, S.**, Kong, H. J., & Myung, S. J."
     venue: "AMEE 2026 &mdash; International Association for Health Professions Education"
     venue_detail: "Austria Center Vienna, Vienna, Austria &middot; Aug 22&ndash;26, 2026"
-    badges:
-      - oral
-      - intl
-    tags:
-      - Virtual Reality
-      - Medical Education
-    desc: Oral presentation of a randomized controlled trial on immersive VR training for novice physicians'
-      emergency response skills.
+    note: "Oral Presentation"
+    desc: "Oral presentation of a randomized controlled trial on immersive VR training for novice physicians' emergency response skills."
+
   - year: 2025
-    title: Emergency Procedure Hand Tracking (Trauma THOMPSON Challenge, Task 2)
-    authors: "Choi, D. H., **Jeong, S.**, Lim, E. J., Lee, W. J., Park, T. J., Lee, K. E., & Kong, H.\
-      \ J."
-    venue: "MICCAI 2025 &mdash; Trauma THOMPSON Challenge"
-    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 23, 2025"
-    badges:
-      - challenge
-      - intl
-      - "award:1st Prize"
-    tags:
-      - Hand Tracking
-      - Surgical Video Analysis
-    desc: 1st Prize in the Emergency Procedure Hand Tracking task.
-  - year: 2025
-    title: "Open Suturing Skills Task 2: OSATS Score Classification"
-    authors: "Hong, S. J., Park, J. E., Shin, S. Y., Kang, D. H., Kong, Y., **Jeong, S.**, Lee, K. E.,\
-      \ & Kong, H. J."
-    venue: "MICCAI 2025 &mdash; Endoscopic Vision Challenge"
-    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 26, 2025"
-    badges:
-      - challenge
-      - intl
-      - "award:2nd Place"
-    tags:
-      - Surgical Skill Assessment
-    desc: "2nd place for classifying five OSATS scores (0&ndash;4) across eight objective structured assessment\
-      \ of technical skill categories."
-  - year: 2025
-    title: "Open Suturing Skills Task 3: Hand &amp; Tool Keypoint Tracking"
-    authors: "Kang, D. H., Park, J. E., Shin, S. Y., Hong, S. J., Kong, Y., **Jeong, S.**, Lee, K. E.,\
-      \ & Kong, H. J."
-    venue: "MICCAI 2025 &mdash; Endoscopic Vision Challenge"
-    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 26, 2025"
-    badges:
-      - challenge
-      - intl
-      - "award:2nd Place"
-    tags:
-      - Keypoint Tracking
-    desc: 2nd place for tracking hands and tools via keypoints across eight OSATS categories.
-  - year: 2025
-    title: Virtual Reality-based Art Therapy to Alleviate Anxiety in Hospitalized Children
+    title: "Virtual Reality-based Art Therapy to Alleviate Anxiety in Hospitalized Children"
     authors: "Shin, S. Y., **Jeong, S.**, Woo, J., & Kong, H. J."
     venue: "2025 Bio-IT Conference &amp; Expo"
     venue_detail: "Omni Hotel Boston, Boston, MA, USA &middot; Apr 2&ndash;4, 2025"
-    badges:
-      - poster
-      - intl
-    tags:
-      - Virtual Reality
-      - Digital Therapeutics
-    desc: VR-based art therapy application for alleviating anxiety in hospitalized children.
+    note: "Poster"
+    desc: "VR-based art therapy application for alleviating anxiety in hospitalized children."
+
   - year: 2024
-    title: Development of Deep Learning-based Model for Differential Diagnosis of Ovarian Neoplasm Using
-      Pelvic Ultrasonography
-    authors: "Paik, H., Hong, Y. H., Kim, S. K., **Jeong, S.**, Choe, D., Kong, H. J., Lee, J. R., & Suh,\
-      \ C. S."
-    venue: ESHRE 40th Annual Meeting
+    title: "Development of Deep Learning-based Model for Differential Diagnosis of Ovarian Neoplasm Using Pelvic Ultrasonography"
+    authors: "Paik, H., Hong, Y. H., Kim, S. K., **Jeong, S.**, Choe, D., Kong, H. J., Lee, J. R., & Suh, C. S."
+    venue: "ESHRE 40th Annual Meeting"
     venue_detail: "Amsterdam, The Netherlands &middot; Jul 7&ndash;10, 2024"
-    badges:
-      - poster
-      - intl
-    tags:
-      - Deep Learning
-      - Medical Image Processing
-    desc: Deep learning model for differential diagnosis of ovarian neoplasms from pelvic ultrasonography.
-  - year: 2024
-    title: "SwiftMedSAM: Ultra-lightweight Prompt-Based Universal Medical Image Segmentation Model"
-    authors: "Kong, Y., Kim, K., **Jeong, S.**, Lee, K. E., & Kong, H. J."
-    venue: "CVPR 2024 Challenge &mdash; Segment Anything in Medical Images"
-    venue_detail: "Seattle, WA, USA &middot; Medical Image Segmentation Challenge, pp. 180&ndash;194,\
-      \ Springer Nature Switzerland"
-    badges:
-      - proceedings
-      - intl
-    links:
-      - label: Paper
-        href: "https://link.springer.com/chapter/10.1007/978-3-031-81854-7_12"
-      - label: Challenge
-        href: "https://openreview.net/forum?id=8l8JVb7nUB"
-    tags:
-      - Medical Image Segmentation
-    desc: Ultra-lightweight prompt-based universal medical image segmentation model for highly constrained
-      environments.
+    note: "Poster"
+    desc: "Deep learning model for differential diagnosis of ovarian neoplasms from pelvic ultrasonography."
+
   - year: 2023
-    title: "Multi-organ and Pan-cancer Segmentation Framework from Partially Labeled Abdominal CT Datasets:\
-      \ Fine and Swift nn-UNets with Label Fusion"
-    authors: "Kong, Y., Kim, K., **Jeong, S.**, Lee, K. E., & Kong, H. J."
-    venue: "MICCAI 2023 &mdash; 26th International Conference"
-    venue_detail: "Vancouver Convention Centre, Canada &middot; Oct 9, 2023"
-    badges:
-      - proceedings
-      - intl
-      - "award:Honorable Mention"
-    links:
-      - label: Paper
-        href: "https://link.springer.com/chapter/10.1007/978-3-031-58776-4_21"
-    tags:
-      - Medical Image Segmentation
-    desc: Fast and efficient multi-organ and pan-cancer segmentation framework for partially labeled abdominal
-      CT datasets.
-  - year: 2023
-    title: Synthetic Data for Instrument Segmentation in Surgery
+    title: "Synthetic Data for Instrument Segmentation in Surgery"
     authors: "**Jeong, S.**, Lee, K. S., Kong, Y., Lee, K. E., & Kong, H. J."
     venue: "MICCAI 2023 &mdash; 26th International Conference"
     venue_detail: "Vancouver Convention Centre, Canada &middot; Oct 9, 2023"
-    badges:
-      - oral
-      - intl
-      - presenter
-    tags:
-      - Synthetic Data
-      - Segmentation
-    desc: Generating synthetic training data for surgical instrument segmentation models.
-  - year: 2022
-    title: A Study on UX Design for Improving Usability of an AI-based High Fall-risk Prediction System
-    authors: "**Jeong, S.**, Yoon, G. R., Choi, Y. J., Cheon, D. H., Shin, J. E., Cho, E. J., Min, S.\
-      \ I., & Kong, H. J."
-    venue: KOSOMBE 2022 Fall Conference
-    venue_detail: "Paradise City Hotel, Incheon, Korea &middot; Nov 4, 2022"
-    badges:
-      - poster
-      - intl
-      - presenter
+    note: "Oral Presentation &middot; Presenter"
+    desc: "Generating synthetic training data for surgical instrument segmentation models."
+
+challenge:
+  - year: 2025
+    title: "Emergency Procedure Hand Tracking (Task 2)"
+    authors: "Choi, D. H., **Jeong, S.**, Lim, E. J., Lee, W. J., Park, T. J., Lee, K. E., & Kong, H. J."
+    venue: "MICCAI 2025 &mdash; Trauma THOMPSON Challenge"
+    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 23, 2025"
+    note: "1st Prize"
+    desc: "Hand tracking during emergency procedures from egocentric video."
+
+  - year: 2025
+    title: "Open Suturing Skills Task 2: OSATS Score Classification"
+    authors: "Hong, S. J., Park, J. E., Shin, S. Y., Kang, D. H., Kong, Y., **Jeong, S.**, Lee, K. E., & Kong, H. J."
+    venue: "MICCAI 2025 &mdash; Endoscopic Vision Challenge"
+    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 26, 2025"
+    note: "2nd Place"
+    desc: "Classifying five OSATS scores (0&ndash;4) across eight objective structured assessment of technical skill categories."
+
+  - year: 2025
+    title: "Open Suturing Skills Task 3: Hand &amp; Tool Keypoint Tracking"
+    authors: "Kang, D. H., Park, J. E., Shin, S. Y., Hong, S. J., Kong, Y., **Jeong, S.**, Lee, K. E., & Kong, H. J."
+    venue: "MICCAI 2025 &mdash; Endoscopic Vision Challenge"
+    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 26, 2025"
+    note: "2nd Place"
+    desc: "Tracking hands and tools via keypoints across eight OSATS categories."
+
+  - year: 2024
+    title: "SwiftMedSAM: Ultra-lightweight Prompt-Based Universal Medical Image Segmentation Model"
+    authors: "Kong, Y., Kim, K., **Jeong, S.**, Lee, K. E., & Kong, H. J."
+    venue: "CVPR 2024 &mdash; Segment Anything in Medical Images Challenge"
+    venue_detail: "Seattle, WA, USA &middot; Medical Image Segmentation Challenge, pp. 180&ndash;194, Springer Nature Switzerland"
+    note: "Proceedings"
     links:
-      - label: Proceedings
-        href: "http://conference21.kosombe.or.kr/register/2022_fall/file/ebook.pdf?v=260423"
-    tags:
-      - UX Design
-      - Machine Learning
-    desc: UX design study to improve the usability of an AI-based system for predicting patients at high
-      risk of falls.
+      - { label: "Paper", href: "https://link.springer.com/chapter/10.1007/978-3-031-81854-7_12" }
+      - { label: "Challenge", href: "https://openreview.net/forum?id=8l8JVb7nUB" }
+    desc: "Ultra-lightweight prompt-based universal medical image segmentation model for highly constrained environments."
+
+  - year: 2023
+    title: "Multi-organ and Pan-cancer Segmentation Framework from Partially Labeled Abdominal CT Datasets: Fine and Swift nn-UNets with Label Fusion"
+    authors: "Kong, Y., Kim, K., **Jeong, S.**, Lee, K. E., & Kong, H. J."
+    venue: "MICCAI 2023 &mdash; 26th International Conference"
+    venue_detail: "Vancouver Convention Centre, Canada &middot; Oct 9, 2023"
+    note: "Honorable Mention"
+    links:
+      - { label: "Paper", href: "https://link.springer.com/chapter/10.1007/978-3-031-58776-4_21" }
+    desc: "Fast and efficient multi-organ and pan-cancer segmentation framework for partially labeled abdominal CT datasets."
+
+  - year: 2022
+    title: "A Study on the Anesthetic Management Model Predicting the Increase of Anesthetic During Surgery in Real-time"
+    authors: "**Jeong, S.**, Kim, H. S., Sim, D. Y., Lee, H. H., Kong, H. J., & Lee, H. C."
+    venue: "Singapore Healthcare AI Datathon &amp; EXPO"
+    venue_detail: "National University of Singapore &middot; Dec 5, 2022"
+    note: "Second Runner-up (2nd Place)"
+    desc: "Real-time model predicting intraoperative increases in anesthetic requirement from biosignals."

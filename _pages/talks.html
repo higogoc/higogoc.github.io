@@ -13,7 +13,10 @@ author_profile: true
 <div class="ap-row ap-row--narrow">
   <div class="ap-row__date">{{ talk.date }}</div>
   <div>
-    <div class="ap-row__title">{{ talk.title }}{% include badges.html list=talk.badges %}</div>
+    <div class="ap-row__title">
+      {{- talk.title -}}
+      {%- if talk.note %} &middot; <strong>{{ talk.note }}</strong>{% endif -%}
+    </div>
     {% if talk.venue %}<div class="ap-row__org">{{ talk.venue }}</div>{% endif %}
     {% if talk.detail or talk.links %}
     <div class="ap-row__detail">
@@ -50,8 +53,10 @@ author_profile: true
 <div class="ap-row ap-row--narrow">
   <div class="ap-row__date">{{ patent.date }}</div>
   <div>
-    <div class="ap-row__title">{{ patent.title }}</div>
-    {% if patent.status %}<div class="ap-row__org">{{ patent.status }}</div>{% endif %}
+    <div class="ap-row__title">
+      {{- patent.title -}}
+      {%- if patent.status %} &middot; <strong>{{ patent.status }}</strong>{% endif -%}
+    </div>
     <div class="ap-row__detail">
       {%- if patent.number %}<b>No.:</b> {{ patent.number }}{% endif -%}
       {%- if patent.inventors %}<br><b>Inventors:</b> {{ patent.inventors | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% endif -%}

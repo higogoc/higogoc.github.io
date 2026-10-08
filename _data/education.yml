@@ -1,17 +1,25 @@
 # Edited by hand. Jekyll reads this as site.data.education
-# See MAINTENANCE.md for the field reference.
+# **double asterisks** render as bold.
+# TODO: confirm the enrolment year and replace "Present" with e.g. "09.2023 &ndash; Present".
+- period: "Present"
+  title: "Ph.D. Student, Interdisciplinary Program in Bioengineering"
+  org: "Seoul National University"
+  location: "Seoul, Republic of Korea"
+  details:
+    - "Research areas: **extended reality for medical education**, **surgical digital twins**"
+
 - period: "09.2021 &ndash; 08.2023"
-  title: M.S. in Interdisciplinary Program in Bioengineering
-  org: Seoul National University
-  location: Seoul, Republic of Korea
+  title: "M.S. in Interdisciplinary Program in Bioengineering"
+  org: "Seoul National University"
+  location: "Seoul, Republic of Korea"
   details:
     - "Biomedical Modeling &amp; Control Lab (Advisor: Sungwan Kim)"
     - "Medical Spatial Computing Lab (Advisor: Hyoun-Joong Kong)"
+
 - period: "2015 &ndash; 2020"
   title: "B.S. in Biomedical Engineering &amp; Mechanical Design Engineering"
-  org: Jeonbuk National University
-  location: Jeonju, Republic of Korea
-  badges:
-    - "note:Summa Cum Laude"
+  org: "Jeonbuk National University"
+  location: "Jeonju, Republic of Korea"
   details:
+    - "**Summa Cum Laude**"
     - "Human Computer Interface Lab (Advisor: Yoonseok Yang)"

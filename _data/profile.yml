@@ -1,19 +1,12 @@
 # Edited by hand. Jekyll reads this as site.data.profile
 # See MAINTENANCE.md for the field reference.
-tagline: Creating unbiased AI technologies for the medical field
+# **double asterisks** render as bold.
 keywords:
-  - Medical Imaging AI
-  - Surgical Video Understanding
-  - Extended Reality
-  - Wearable Biosignals
-  - Clinical LLM
+  - "XR for Medical Education"
+  - "Surgical Digital Twin"
+  - "Medical Imaging AI"
+  - "Clinical Integration"
 bio:
-  - "I am a researcher at Seoul National University Hospital working on unbiased AI for clinical practice.\
-    \ My work sits at the intersection of deep learning, extended reality (XR), and medicine &mdash; building\
-    \ systems that support diagnosis, surgical skill assessment, clinical training, and continuous patient\
-    \ monitoring."
-  - "My research spans medical imaging AI, surgical video understanding, XR-based medical education, wearable\
-    \ biosignal modelling, and clinical large language models. Recent work appears in <i>Surgery</i>,\
-    \ <i>JMIR Medical Education</i>, <i>Aesthetic Surgery Journal</i>, and <i>Scientific Reports</i>,\
-    \ and our team placed 1st in the Trauma THOMPSON Challenge and 2nd in two Endoscopic Vision Challenge\
-    \ tasks at MICCAI 2025."
+  - "I am a **Ph.D. student at Seoul National University**, researching **extended reality for medical education** and **surgical digital twins**."
+  - "My goal is not to stop at building the technology. It has to work in the clinic &mdash; **improving patient outcomes** and **the efficiency of clinical teams**. So I track where the technology is going, **respect the expertise of clinicians**, and learn from them to keep the research practical."
+  - "My strength is **building the integrated systems that clinical practice actually needs**. I listen to the floor, solve problems alongside clinicians, and work to contribute to **unsolved medical problems through AI**."

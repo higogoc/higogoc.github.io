@@ -11,7 +11,10 @@ author_profile: true
 <div class="ap-row ap-row--narrow">
   <div class="ap-row__date">{{ award.date }}</div>
   <div>
-    <div class="ap-row__title">{{ award.title }}{% if award.scope %}{% assign scope_list = award.scope | split: "," %}{% include badges.html list=scope_list %}{% endif %}</div>
+    <div class="ap-row__title">
+      {{- award.title -}}
+      {%- if award.scope %} &middot; <strong>{{ award.scope }}</strong>{% endif -%}
+    </div>
     {% if award.org %}<div class="ap-row__org">{{ award.org }}</div>{% endif %}
     <div class="ap-row__detail">
       {%- if award.project %}<b>Project:</b> {{ award.project }}{% endif -%}

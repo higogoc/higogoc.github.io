@@ -1,23 +1,35 @@
 # Edited by hand. Jekyll reads this as site.data.news
-# See MAINTENANCE.md for the field reference.
-- date: '2026.08'
-  text: Presented our randomized controlled trial on immersive VR training for novice physicians' emergency
-    response skills as an oral presentation at AMEE 2026, Vienna.
-  tag: Talk
-- date: '2025.12'
-  text: Received the Grand Prize at the Capstone Design Competition for a home-based pre-consultation
-    system for allergy clinics.
-  tag: Award
-- date: '2025.11'
-  text: Received the IITP Director's Award (2nd place) at the 2025 Global Data Convergence Leader Program
-    outcome sharing, Ministry of Science and ICT.
-  tag: Award
-- date: '2025.09'
-  text: Our team won 1st Prize in the Emergency Procedure Hand Tracking task of the MICCAI 2025 Trauma
-    THOMPSON Challenge, and 2nd place in two Open Suturing Skills tasks of the MICCAI 2025 Endoscopic
-    Vision Challenge.
-  tag: Award
-- date: '2025.04'
-  text: "Presented a VR-based art therapy system for alleviating anxiety in hospitalized children at the\
-    \ 2025 Bio-IT Conference & Expo, Boston."
-  tag: Talk
+# Reserved for high-impact items from roughly the last two to three years:
+# top-journal papers, major prizes, and press coverage. Newest first.
+# **double asterisks** render as bold.
+- date: "2026.01"
+  tag: "Media"
+  text: "Our team **AllerVision**, which built an **AI agent-based pre-consultation system**, placed 2nd at the 1st SNU RISE Capstone Design Competition."
+  outlet: "SNU College of Engineering"
+  href: "https://eng.snu.ac.kr/communication/promotion/news?md=v&bbsidx=6320"
+
+- date: "2026"
+  tag: "Paper"
+  text: "Our randomized controlled trial on **immersive VR training for novice physicians' emergency response skills** was published in **JMIR Medical Education (IF 13.9, ranked #1 of 89 in Education, Scientific Disciplines)**."
+  href: "https://doi.org/10.2196/71455"
+
+- date: "2026"
+  tag: "Paper"
+  text: "Our multi-institutional study on **deep learning-based breast implant classification in ultrasonography** was published in **Aesthetic Surgery Journal (ranked #1 in Plastic Surgery)**."
+  href: "https://pubmed.ncbi.nlm.nih.gov/41168671/"
+
+- date: "2025.09"
+  tag: "Award"
+  text: "Our team won **1st Prize** in the Emergency Procedure Hand Tracking task of the **MICCAI 2025 Trauma THOMPSON Challenge**, and **2nd place** in two Open Suturing Skills tasks of the **MICCAI 2025 Endoscopic Vision Challenge**."
+
+- date: "2024.12"
+  tag: "Media"
+  text: "Seoul National University Hospital announced our **machine learning model for optimizing outpatient follow-up after cervical laminoplasty**, which identifies patients whose recovery makes yearly follow-up unnecessary."
+  outlet: "Medifonews"
+  href: "https://www.medifonews.com/news/article.html?no=198374"
+
+- date: "2023.04"
+  tag: "Media"
+  text: "Interviewed on research using **single-lead ECG to predict electrolyte levels**, with the aim of sparing thyroid surgery patients repeated blood draws."
+  outlet: "The Medical"
+  href: "https://www.themedical.kr/news/articleView.html?idxno=773"

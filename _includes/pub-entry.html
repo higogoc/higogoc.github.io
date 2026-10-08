@@ -1,0 +1,32 @@
+{%- comment -%}
+One publication / conference / challenge entry.
+Usage: {% include pub-entry.html item=pub show_year=true %}
+Fields: title, authors, venue, venue_detail, metrics, note, links, desc
+  metrics -> bold, in parentheses   note -> bold, after a separator
+{%- endcomment -%}
+{%- assign item = include.item -%}
+<div class="ap-entry">
+  <h4 class="ap-entry__title">
+    {%- if item.links and item.links.size > 0 -%}
+      <a href="{{ item.links[0].href }}">{{ item.title }}</a>
+    {%- else -%}
+      {{ item.title }}
+    {%- endif -%}
+  </h4>
+  <p class="ap-entry__authors">{{ item.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+  <p class="ap-entry__meta">
+    {%- if item.venue %}<em>{{ item.venue }}</em>{% endif -%}
+    {%- if include.show_year %}, {{ item.year }}{% endif -%}
+    {%- if item.metrics %} <strong>({{ item.metrics }})</strong>{% endif -%}
+    {%- if item.venue_detail %}<br>{{ item.venue_detail }}{% endif -%}
+    {%- if item.note %}{% if item.venue_detail %} &middot; {% else %} &middot; {% endif %}<strong>{{ item.note }}</strong>{% endif -%}
+  </p>
+  {%- if item.desc %}
+  <p class="ap-entry__desc">{{ item.desc }}</p>
+  {%- endif %}
+  {%- if item.links and item.links.size > 0 %}
+  <p class="ap-entry__links">
+    {%- for link in item.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
+  </p>
+  {%- endif %}
+</div>

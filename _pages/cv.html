@@ -9,38 +9,18 @@ author_profile: true
 
 <p><a href="https://1drv.ms/b/s!Arq-JhppjNaold8YWKk1SIU70RF5Aw?e=GyS13B">Download the full CV as a PDF</a>.</p>
 
-{% if site.data.experience and site.data.experience.size > 0 %}
-<h2>Experience</h2><hr />
-{% for item in site.data.experience %}
-<div class="ap-row">
-  <div class="ap-row__date">{{ item.period }}</div>
-  <div>
-    <div class="ap-row__title">{{ item.title }}{% include badges.html list=item.badges %}</div>
-    <div class="ap-row__org">
-      {{- item.org -}}
-      {%- if item.location %} &middot; {{ item.location }}{% endif -%}
-    </div>
-    {% if item.details %}
-    <div class="ap-row__detail">
-      <ul>
-      {%- for detail in item.details %}
-        <li>{{ detail }}</li>
-      {%- endfor %}
-      </ul>
-    </div>
-    {% endif %}
-  </div>
-</div>
-{% endfor %}
-{% endif %}
+{% assign sections = "experience,education" | split: "," %}
+{% assign headings = "Experience,Education" | split: "," %}
 
-{% if site.data.education and site.data.education.size > 0 %}
-<h2>Education</h2><hr />
-{% for item in site.data.education %}
+{% for section in sections %}
+  {% assign entries = site.data[section] %}
+  {% if entries and entries.size > 0 %}
+<h2>{{ headings[forloop.index0] }}</h2><hr />
+    {% for item in entries %}
 <div class="ap-row">
   <div class="ap-row__date">{{ item.period }}</div>
   <div>
-    <div class="ap-row__title">{{ item.title }}{% include badges.html list=item.badges %}</div>
+    <div class="ap-row__title">{{ item.title }}</div>
     <div class="ap-row__org">
       {{- item.org -}}
       {%- if item.location %} &middot; {{ item.location }}{% endif -%}
@@ -49,15 +29,16 @@ author_profile: true
     <div class="ap-row__detail">
       <ul>
       {%- for detail in item.details %}
-        <li>{{ detail }}</li>
+        <li>{{ detail | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
       {%- endfor %}
       </ul>
     </div>
     {% endif %}
   </div>
 </div>
+    {% endfor %}
+  {% endif %}
 {% endfor %}
-{% endif %}
 
 {% if site.data.skills and site.data.skills.size > 0 %}
 <h2>Skills</h2><hr />
@@ -67,7 +48,7 @@ author_profile: true
     <h4>{{ group.group }}</h4>
     <ul>
     {%- for item in group.items %}
-      <li>{{ item }}</li>
+      <li>{{ item | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
     {%- endfor %}
     </ul>
   </div>
