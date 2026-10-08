@@ -16,7 +16,7 @@ push to `main` — there is no build step to run by hand.
 
 | Path | What it is |
 |---|---|
-| `_data/*.yml` | All content — profile, news, research, publications, awards, talks, service, patents, experience, education, skills, beyond |
+| `_data/*.yml` | All content — profile, news, publications, awards, talks, service, patents, experience, education, skills, beyond |
 | `_pages/` | One file per page: `/`, `/publications/`, `/awards/`, `/cv/`, `/beyond/`, `/talks/` |
 | `_config.yml` | Site settings and the sidebar author block |
 | `_sass/_custom.scss` | Site-specific styling on top of the theme |

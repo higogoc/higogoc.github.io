@@ -19,7 +19,7 @@ _data/*.yml  ──▶  _pages/*.html  ──▶  GitHub Pages (Jekyll)  ──�
 
 | URL | File | Reads |
 |---|---|---|
-| `/` | `_pages/about.md` | `profile.yml`, `research.yml`, `news.yml` |
+| `/` | `_pages/about.md` | `profile.yml`, `news.yml` |
 | `/publications/` | `_pages/publications.html` | `publications.yml` |
 | `/awards/` | `_pages/awards.html` | `awards.yml` |
 | `/cv/` | `_pages/cv.html` | `experience.yml`, `education.yml`, `skills.yml` |
@@ -61,7 +61,7 @@ site did not update; open the log, it names the file and line.
 |---|---|
 | Paper accepted or published | `publications.yml` (`journal`) + a line in `news.yml` |
 | Conference presentation | `publications.yml` (`conference`) + `news.yml` |
-| Award or challenge result | `awards.yml` + `news.yml` |
+| Award, challenge or competition result | `awards.yml` + `news.yml` |
 | Invited talk | `talks.yml` |
 | Press coverage | `news.yml` with an `outlet` field |
 | Patent filed or granted | `patents.yml` |
@@ -71,14 +71,13 @@ site did not update; open the log, it names the file and line.
 
 - Re-read `profile.yml`: is the bio still what you actually do?
 - Trim `news.yml` to roughly the last two years.
-- Check the `research.yml` themes still match where your time goes.
+- Check the bio in `profile.yml` still names the right research areas.
 - Click every link in `publications.yml` — preprint URLs go stale on publication.
 - Re-upload the CV PDF and confirm the link in `_pages/cv.html` still resolves.
 
 **Once a year**
 
 - Update `beyond.yml` volunteer hours and any giving.
-- Reorder `research.yml` so your current main line sits first.
 
 ---
 
@@ -126,7 +125,8 @@ Newest first.
 ### `_data/publications.yml`
 
 Two lists, `journal` and `conference`. Entries are grouped by `year`
-automatically, so their order in the file does not matter.
+automatically, so their order in the file does not matter. Competition and
+challenge results with no paper belong in `awards.yml`, not here.
 
 ```yaml
 journal:
@@ -134,33 +134,40 @@ journal:
     title: "..."
     authors: "Lee, S., **Jeong, S.**, Kong, H. J."
     venue: "Surgery"
-    venue_detail: "24(1), 278"          # optional
-    badges: ["q1", "first"]
+    venue_detail: "24(1), 278"               # optional
+    metrics: "Q1, IF 13.9, ranked #1 of 89"  # optional, bold in parentheses
+    note: "1st Author"                       # optional, bold at the end
     links:
       - { label: "Paper", href: "https://doi.org/..." }
-    tags: ["Deep Learning"]
     desc: "One or two sentences."
 ```
 
 The first entry in `links` also becomes the link on the title.
 
-### Badges
+### Emphasis
 
-Keys are defined in `_data/badges.yml`:
+There are no coloured badges or pills anywhere on the site. Emphasis is plain
+bold text, and it comes from two optional fields:
 
-`q1` `q2` `top10` `first` `cofirst` `corresponding` `presenter` `oral` `poster`
-`challenge` `proceedings` `intl` `domestic` `invited`
+- `metrics` renders as **(Q1, IF 13.9, ranked #1 of 89)** right after the venue.
+  Use it for quartile, impact factor and category rank.
+- `note` renders bold at the end of the meta line. Use it for author position
+  (`1st Author`, `Co-first Author`), presentation type (`Oral Presentation`,
+  `Poster`, `Proceedings`), or a combination separated by `&middot;`.
 
-For a one-off label, write `"award:1st Prize"` or `"note:Best Paper"` — the text
-after the colon is used verbatim, and the part before it picks the styling.
-Three styles exist: `neutral` (outline), `accent` (coloured), `strong` (filled).
+Inside any `authors`, `team`, `inventors` or `details` value, `**text**`
+renders as bold.
 
 ### `_data/awards.yml`
 
+`scope` decides which section the entry lands in on `/awards/`, so the page has
+one **International** heading and one **Domestic** heading instead of repeating
+a label on every row. Keep each scope newest first.
+
 ```yaml
 - date: "2025.12"
-  title: "Grand Prize"
   scope: "domestic"        # domestic | international
+  title: "Grand Prize"
   org: "Capstone Design Competition"
   project: "..."
   team: "Choi, D. H., **Jeong, S.**, Kong, H. J."
@@ -168,6 +175,9 @@ Three styles exist: `neutral` (outline), `accent` (coloured), `strong` (filled).
     - { label: "Demo video", href: "https://..." }
 ```
 
+Challenge and competition placings live here too — that is the only place they
+appear, unless the entry also produced a peer-reviewed paper, in which case the
+paper goes under `conference` as well.
 ### `_data/talks.yml`, `service.yml`, `patents.yml`
 
 All three render on `/talks/`.
@@ -211,20 +221,6 @@ All three render on `/talks/`.
   items: ["PyTorch", "TensorFlow"]
 ```
 
-### `_data/research.yml`
-
-The themes on the home page. Keep this to 3–5 and put the one you spend most of
-your time on first.
-
-```yaml
-- title: "Medical Imaging AI"
-  summary: "One sentence on what the theme is."
-  topics: ["specific study or system", "another one"]
-  keywords: ["Deep Learning", "Segmentation"]
-  links:
-    - { label: "Talk", href: "https://..." }
-```
-
 ### `_data/beyond.yml`
 
 ```yaml
@@ -250,7 +246,7 @@ the way until you fill them in.
 The theme ships five colour schemes. Change `site_theme` in `_config.yml` to
 `default`, `air`, `sunrise`, `mint`, `dirt`, or `contrast`.
 
-Site-specific styling — badges, entry rows, research themes, stat cards — lives
+Site-specific styling — entry rows, keyword chips, the news list, stat cards — lives
 in `_sass/_custom.scss`. It is written against the theme's own CSS variables, so
 it follows whichever scheme you pick, in both light and dark mode.
 

@@ -14,9 +14,8 @@ there is no generated file to commit.
 - `_config.yml` — site settings and the sidebar `author:` block
 - `_sass/_custom.scss` — the only site-specific styling, imported at the end of
   `assets/css/main.scss`
-- `_includes/badges.html` + `_data/badges.yml` — badge rendering
-- `_includes/pub-entry.html` — shared renderer for publication, conference and
-  challenge entries
+- `_includes/pub-entry.html` — shared renderer for journal and conference
+  entries
 - Everything else under `_includes/`, `_layouts/`, `_sass/`, `assets/` is stock
   theme. Do not edit it without a reason; upstream updates get harder.
 
@@ -55,6 +54,10 @@ If Ruby is available: `bundle install && bundle exec jekyll serve --livereload`.
   placeholder entries to make a section appear.
 - `/talks/` is deliberately absent from `_data/navigation.yml` until
   `talks.yml`, `service.yml`, or `patents.yml` has content.
+- Competition and challenge placings live only in `awards.yml`, split by
+  `scope` into the International and Domestic sections of `/awards/`. If a
+  challenge also produced a peer-reviewed paper, that paper is listed under
+  `conference` in `publications.yml` with `note: "Proceedings"`.
 
 ## Content accuracy
 

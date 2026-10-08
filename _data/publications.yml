@@ -1,5 +1,5 @@
 # Edited by hand. Jekyll reads this as site.data.publications
-# Three lists: journal, conference (international only), challenge.
+# Two lists: journal and conference (international only).
 # Entries are grouped by `year` automatically, so file order does not matter.
 #
 # metrics -> rendered bold in parentheses after the venue, e.g. (Q1, IF 5.1)
@@ -119,31 +119,6 @@ conference:
     note: "Oral Presentation &middot; Presenter"
     desc: "Generating synthetic training data for surgical instrument segmentation models."
 
-challenge:
-  - year: 2025
-    title: "Emergency Procedure Hand Tracking (Task 2)"
-    authors: "Choi, D. H., **Jeong, S.**, Lim, E. J., Lee, W. J., Park, T. J., Lee, K. E., & Kong, H. J."
-    venue: "MICCAI 2025 &mdash; Trauma THOMPSON Challenge"
-    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 23, 2025"
-    note: "1st Prize"
-    desc: "Hand tracking during emergency procedures from egocentric video."
-
-  - year: 2025
-    title: "Open Suturing Skills Task 2: OSATS Score Classification"
-    authors: "Hong, S. J., Park, J. E., Shin, S. Y., Kang, D. H., Kong, Y., **Jeong, S.**, Lee, K. E., & Kong, H. J."
-    venue: "MICCAI 2025 &mdash; Endoscopic Vision Challenge"
-    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 26, 2025"
-    note: "2nd Place"
-    desc: "Classifying five OSATS scores (0&ndash;4) across eight objective structured assessment of technical skill categories."
-
-  - year: 2025
-    title: "Open Suturing Skills Task 3: Hand &amp; Tool Keypoint Tracking"
-    authors: "Kang, D. H., Park, J. E., Shin, S. Y., Hong, S. J., Kong, Y., **Jeong, S.**, Lee, K. E., & Kong, H. J."
-    venue: "MICCAI 2025 &mdash; Endoscopic Vision Challenge"
-    venue_detail: "Daejeon Convention Center, Korea &middot; Sep 26, 2025"
-    note: "2nd Place"
-    desc: "Tracking hands and tools via keypoints across eight OSATS categories."
-
   - year: 2024
     title: "SwiftMedSAM: Ultra-lightweight Prompt-Based Universal Medical Image Segmentation Model"
     authors: "Kong, Y., Kim, K., **Jeong, S.**, Lee, K. E., & Kong, H. J."
@@ -160,15 +135,7 @@ challenge:
     authors: "Kong, Y., Kim, K., **Jeong, S.**, Lee, K. E., & Kong, H. J."
     venue: "MICCAI 2023 &mdash; 26th International Conference"
     venue_detail: "Vancouver Convention Centre, Canada &middot; Oct 9, 2023"
-    note: "Honorable Mention"
+    note: "Proceedings"
     links:
       - { label: "Paper", href: "https://link.springer.com/chapter/10.1007/978-3-031-58776-4_21" }
     desc: "Fast and efficient multi-organ and pan-cancer segmentation framework for partially labeled abdominal CT datasets."
-
-  - year: 2022
-    title: "A Study on the Anesthetic Management Model Predicting the Increase of Anesthetic During Surgery in Real-time"
-    authors: "**Jeong, S.**, Kim, H. S., Sim, D. Y., Lee, H. H., Kong, H. J., & Lee, H. C."
-    venue: "Singapore Healthcare AI Datathon &amp; EXPO"
-    venue_detail: "National University of Singapore &middot; Dec 5, 2022"
-    note: "Second Runner-up"
-    desc: "Real-time model predicting intraoperative increases in anesthetic requirement from biosignals."

@@ -28,12 +28,3 @@ author_profile: true
     {% for pub in year.items %}{% include pub-entry.html item=pub %}{% endfor %}
   {% endfor %}
 {% endif %}
-
-{% if site.data.publications.challenge and site.data.publications.challenge.size > 0 %}
-<h2>Challenges and Competitions</h2><hr />
-  {% assign years = site.data.publications.challenge | group_by: "year" | sort: "name" | reverse %}
-  {% for year in years %}
-    <h3>{{ year.name }}</h3>
-    {% for pub in year.items %}{% include pub-entry.html item=pub %}{% endfor %}
-  {% endfor %}
-{% endif %}
