@@ -5,6 +5,16 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   Sidebar — let long values (employer, location) wrap instead of overflowing
+   the 193px column. The theme sets white-space: nowrap on these.
+   -------------------------------------------------------------------------- */
+
+.author__urls li {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* --------------------------------------------------------------------------
    Badges — Q1, 1st Author, International, prizes, ...
    -------------------------------------------------------------------------- */
 

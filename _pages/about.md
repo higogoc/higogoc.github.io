@@ -17,8 +17,7 @@ redirect_from:
 {%- endfor %}
 </ul>
 
-Research
-======
+## Research
 
 {% for theme in site.data.research %}
 <div class="ap-theme">
@@ -46,8 +45,7 @@ Research
 </div>
 {% endfor %}
 
-News
-======
+## News
 
 <div class="ap-news">
 {%- for item in site.data.news %}
