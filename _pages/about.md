@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Seoi Jeong - Homepage"
+seo_title: "Seoi Jeong - Homepage"
 author_profile: true
 redirect_from:
   - /about/

@@ -15,8 +15,17 @@ there is no generated file to commit.
 - `_sass/_custom.scss` — the only site-specific styling, imported at the end of
   `assets/css/main.scss`
 - `_includes/badges.html` + `_data/badges.yml` — badge rendering
+- `_includes/pub-entry.html` — shared renderer for publication, conference and
+  challenge entries
 - Everything else under `_includes/`, `_layouts/`, `_sass/`, `assets/` is stock
   theme. Do not edit it without a reason; upstream updates get harder.
+
+### Local changes to stock theme files
+
+- `_includes/seo.html` — honours an optional `seo_title` front-matter key so a
+  page whose heading already contains the site name does not get a doubled
+  `<title>`. Marked with a `LOCAL CHANGE` comment. Re-apply after any upstream
+  theme update.
 
 ## Building
 
@@ -39,8 +48,9 @@ If Ruby is available: `bundle install && bundle exec jekyll serve --livereload`.
   `&middot;`, and `&amp;` for a literal ampersand.
 - `**text**` in `authors`, `team`, and `inventors` fields renders as bold via
   `markdownify`. Seoi Jeong's own name is bolded this way in every author list.
-- Badge keys live in `_data/badges.yml`. Add a key there rather than inventing
-  inline styling. `"award:1st Prize"` handles one-offs.
+- **No badges or pills.** Emphasis is plain bold text. Journal metrics go in an
+  entry's `metrics` field and render as e.g. *(Q1, IF 13.9, ranked #1 of 89)*;
+  author role, presentation type and prizes go in `note` and render bold.
 - A page section whose data file is empty renders nothing. Do not add
   placeholder entries to make a section appear.
 - `/talks/` is deliberately absent from `_data/navigation.yml` until

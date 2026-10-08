@@ -6,7 +6,15 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% comment %}
+  LOCAL CHANGE: honour an optional `seo_title` in a page's front matter, so a
+  page whose heading already contains the site name does not end up with a
+  doubled <title>. Upstream Minimal Mistakes supports this; academicpages
+  dropped it. Everything else in this file is stock.
+{% endcomment %}
+{% if page.seo_title %}
+  {% assign seo_title = page.seo_title %}
+{% elsif page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 
