@@ -7,14 +7,18 @@ author_profile: true
 
 {% include base_path %}
 
-{% for award in site.data.awards %}
+{% assign scopes = "international,domestic" | split: "," %}
+{% assign headings = "International,Domestic" | split: "," %}
+
+{% for scope in scopes %}
+  {% assign entries = site.data.awards | where: "scope", scope %}
+  {% if entries.size > 0 %}
+<h2>{{ headings[forloop.index0] }}</h2><hr />
+    {% for award in entries %}
 <div class="ap-row ap-row--narrow">
   <div class="ap-row__date">{{ award.date }}</div>
   <div>
-    <div class="ap-row__title">
-      {{- award.title -}}
-      {%- if award.scope %} &middot; <strong>{{ award.scope }}</strong>{% endif -%}
-    </div>
+    <div class="ap-row__title">{{ award.title }}</div>
     {% if award.org %}<div class="ap-row__org">{{ award.org }}</div>{% endif %}
     <div class="ap-row__detail">
       {%- if award.project %}<b>Project:</b> {{ award.project }}{% endif -%}
@@ -27,4 +31,6 @@ author_profile: true
     </div>
   </div>
 </div>
+    {% endfor %}
+  {% endif %}
 {% endfor %}

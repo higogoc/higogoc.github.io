@@ -81,6 +81,7 @@ journal:
     authors: "Kumagai, A., **Jeong, S.**, Kim, D., Kong, H. J., Oh, S., & Lee, S. S."
     venue: "Scientific Reports"
     venue_detail: "13(1), 726"
+    metrics: "Q1"
     links:
       - { label: "Paper", href: "https://www.nature.com/articles/s41598-023-28086-1" }
     desc: "Validation of data mining models for dental age estimation against conventional methods."
@@ -169,5 +170,5 @@ challenge:
     authors: "**Jeong, S.**, Kim, H. S., Sim, D. Y., Lee, H. H., Kong, H. J., & Lee, H. C."
     venue: "Singapore Healthcare AI Datathon &amp; EXPO"
     venue_detail: "National University of Singapore &middot; Dec 5, 2022"
-    note: "Second Runner-up (2nd Place)"
+    note: "Second Runner-up"
     desc: "Real-time model predicting intraoperative increases in anesthetic requirement from biosignals."

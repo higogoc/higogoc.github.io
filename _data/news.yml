@@ -2,25 +2,21 @@
 # Reserved for high-impact items from roughly the last two to three years:
 # top-journal papers, major prizes, and press coverage. Newest first.
 # **double asterisks** render as bold.
-- date: "2026.01"
-  tag: "Media"
-  text: "Our team **AllerVision**, which built an **AI agent-based pre-consultation system**, placed 2nd at the 1st SNU RISE Capstone Design Competition."
-  outlet: "SNU College of Engineering"
-  href: "https://eng.snu.ac.kr/communication/promotion/news?md=v&bbsidx=6320"
-
-- date: "2026"
+- date: "2026.03"
   tag: "Paper"
   text: "Our randomized controlled trial on **immersive VR training for novice physicians' emergency response skills** was published in **JMIR Medical Education (IF 13.9, ranked #1 of 89 in Education, Scientific Disciplines)**."
   href: "https://doi.org/10.2196/71455"
 
-- date: "2026"
+- date: "2026.01"
   tag: "Paper"
   text: "Our multi-institutional study on **deep learning-based breast implant classification in ultrasonography** was published in **Aesthetic Surgery Journal (ranked #1 in Plastic Surgery)**."
   href: "https://pubmed.ncbi.nlm.nih.gov/41168671/"
 
-- date: "2025.09"
+- date: "2026.01"
   tag: "Award"
-  text: "Our team won **1st Prize** in the Emergency Procedure Hand Tracking task of the **MICCAI 2025 Trauma THOMPSON Challenge**, and **2nd place** in two Open Suturing Skills tasks of the **MICCAI 2025 Endoscopic Vision Challenge**."
+  text: "Our team **AllerVision**, which built an **AI agent-based pre-consultation system**, placed 2nd at the 1st SNU RISE Capstone Design Competition."
+  outlet: "SNU College of Engineering"
+  href: "https://eng.snu.ac.kr/communication/promotion/news?md=v&bbsidx=6320"
 
 - date: "2024.12"
   tag: "Media"

@@ -18,6 +18,10 @@ groups:
 
   - title: "Volunteering"
     items:
+      - period: "2018.02"
+        title: "Games Volunteer"
+        org: "PyeongChang 2018 Olympic Winter Games"
+
       - period: "2016.10"
         title: "Sori Angels (&#49548;&#47532;&#52380;&#49324;) student volunteer corps"
         org: "2016 Jeonju International Sori Festival"
