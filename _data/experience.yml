@@ -1,35 +1,44 @@
 # Edited by hand. Jekyll reads this as site.data.experience
-# See MAINTENANCE.md for the field reference.
+# Newest first. **double asterisks** render as bold.
+- period: "03.2024 &ndash; Present"
+  title: "Research Trainee, Department of Transdisciplinary Medicine"
+  org: "Seoul National University Hospital"
+  location: "Seoul, Republic of Korea"
+  details:
+    - "Transdisciplinary medicine training programme, working with clinical teams on medical AI and XR projects"
+
 - period: "03.2021 &ndash; Present"
-  title: Research Assistant
-  org: Seoul National University Hospital
-  location: Seoul, Republic of Korea
+  title: "Research Assistant"
+  org: "Seoul National University Hospital"
+  location: "Seoul, Republic of Korea"
   details:
-    - Medical imaging AI, surgical video understanding, and XR systems for clinical training and care
+    - "Medical imaging AI, surgical video understanding, and XR systems for clinical training and care"
     - "Advisor: Hyoun-Joong Kong"
+
 - period: "03.2021 &ndash; 04.2023"
-  title: Research Assistant
-  org: Seoul National University
-  location: Seoul, Republic of Korea
+  title: "Research Assistant"
+  org: "Seoul National University"
+  location: "Seoul, Republic of Korea"
   details:
-    - Diagnostic deep learning models for endoscopy
+    - "Diagnostic deep learning models for endoscopy"
     - "Advisor: Sungwan Kim"
+
 - period: "01.2020 &ndash; 02.2020"
-  title: Undergraduate Research Intern
-  org: DGIST
-  location: Daegu, Republic of Korea
+  title: "Undergraduate Research Intern"
+  org: "DGIST"
+  location: "Daegu, Republic of Korea"
   details:
-    - fNIRS data acquisition from participants with mild cognitive impairment (MCI) and healthy controls
-    - Design matrix construction and parameter estimation with a generalized linear model (GLM)
+    - "fNIRS data acquisition from participants with mild cognitive impairment (MCI) and healthy controls"
+    - "Design matrix construction and parameter estimation with a generalized linear model (GLM)"
     - "Advisor: Ji-Woong Choi"
+
 - period: "2016 &ndash; 2021"
-  title: Undergraduate Research Intern
-  org: Jeonbuk National University
-  location: Jeonju, Republic of Korea
+  title: "Undergraduate Research Intern"
+  org: "Jeonbuk National University"
+  location: "Jeonju, Republic of Korea"
   details:
     - "Energy harvesting with microbial fuel cells: voltage-doubler circuit design to improve output voltage"
     - "Energy harvesting from solar energy: instrumented sidewalk block"
-    - "Public safety: smart traffic light system, and a real-time CPR feedback interface for untrained\
-      \ bystanders"
+    - "Public safety: smart traffic light system, and a real-time CPR feedback interface for untrained bystanders"
     - "Biomaterials: uniform and aligned nanofiber scaffolds via electrospinning for tissue engineering"
     - "Advisor: Yoonseok Yang"

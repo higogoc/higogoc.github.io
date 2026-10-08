@@ -1,7 +1,6 @@
 # Edited by hand. Jekyll reads this as site.data.education
 # **double asterisks** render as bold.
-# TODO: confirm the enrolment year and replace "Present" with e.g. "09.2023 &ndash; Present".
-- period: "Present"
+- period: "09.2024 &ndash; Present"
   title: "Ph.D. Student, Interdisciplinary Program in Bioengineering"
   org: "Seoul National University"
   location: "Seoul, Republic of Korea"

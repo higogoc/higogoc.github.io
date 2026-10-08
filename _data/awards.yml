@@ -40,6 +40,14 @@
   team: "**Jeong, S.**, Kim, H. S., Sim, D. Y., Lee, H. H., Kong, H. J., Lee, H. C."
 
 # ---------- Domestic ----------
+- date: "2026.01"
+  scope: "domestic"
+  title: "2nd Place"
+  org: "1st SNU RISE Capstone Design Competition, Seoul National University"
+  project: "AllerVision &mdash; AI agent-based pre-consultation system for allergy clinics"
+  links:
+    - { label: "Announcement", href: "https://eng.snu.ac.kr/communication/promotion/news?md=v&bbsidx=6320" }
+
 - date: "2025.12"
   scope: "domestic"
   title: "Grand Prize"
