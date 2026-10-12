@@ -12,8 +12,8 @@ intro: "Work that sits outside the publication record but shapes how I approach 
 sections:
   - title: "Volunteer"
     stats:
-      - { value: "552", label: "Volunteer hours certified since 2011" }
-      - { value: "82", label: "Volunteer activities" }
+      - { value: "552+", label: "Volunteer hours certified since 2011" }
+      - { value: "82+", label: "Volunteer activities" }
     gallery:
       - src: "volunteer-1.jpg"
         caption: "PyeongChang 2018 Winter Olympics volunteer"
