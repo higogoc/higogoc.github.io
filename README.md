@@ -39,9 +39,12 @@ Then open <http://localhost:4000>.
 See **[MAINTENANCE.md](MAINTENANCE.md)** for the schema of every data file and a
 suggested update rhythm.
 
-## Credits
+## Licence
 
-[Academic Pages](https://github.com/academicpages/academicpages.github.io) by
-the Academic Pages contributors, forked from the
-[Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) Jekyll theme
-by Michael Rose. Both MIT licensed.
+Site content &mdash; the text, photographs and the files under `_data/` &mdash;
+is &copy; 2026 Seoi Jeong, licensed
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+The theme code is [Academic Pages](https://github.com/academicpages/academicpages.github.io),
+a fork of [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) by
+Michael Rose, and stays MIT licensed. See [LICENSE](LICENSE) for both.

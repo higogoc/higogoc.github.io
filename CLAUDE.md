@@ -25,6 +25,11 @@ there is no generated file to commit.
   page whose heading already contains the site name does not get a doubled
   `<title>`. Marked with a `LOCAL CHANGE` comment. Re-apply after any upstream
   theme update.
+- `_includes/footer.html` — the copyright line carries the CC BY-NC-ND 4.0
+  content licence. Also marked `LOCAL CHANGE`.
+
+Both are small and flagged in place; re-apply them after any upstream theme
+update.
 
 ## Building
 
@@ -68,6 +73,8 @@ If Ruby is available: `bundle install && bundle exec jekyll serve --livereload`.
   scripts. The `Jekyll build check` workflow parses every inline script in
   `_site` with `node --check`, so a regression fails CI.
 
+- Licensing is split: site content is CC BY-NC-ND 4.0, the theme code stays
+  MIT. `LICENSE` spells both out. Do not relicense theme files.
 - Everything under `images/` is published and indexed. Never commit a scan of
   an official document (certificates, awards, IDs) &mdash; they carry names,
   issue numbers and resident registration fields. Quote the figure in text
