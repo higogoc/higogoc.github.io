@@ -8,56 +8,60 @@ author_profile: true
 {% include base_path %}
 
 {% assign beyond = site.data.beyond %}
-{% assign volunteer = beyond.volunteer %}
 
 {% if beyond.intro %}<p>{{ beyond.intro }}</p>{% endif %}
 
-{% if volunteer %}
-<h2>{{ volunteer.title | default: "Volunteer" }}</h2><hr />
+{% assign gallery_count = 0 %}
 
-{% if volunteer.stats and volunteer.stats.size > 0 %}
+{% for section in beyond.sections %}
+  {% assign has_items = false %}
+  {% if section.items and section.items.size > 0 %}{% assign has_items = true %}{% endif %}
+  {% assign has_gallery = false %}
+  {% if section.gallery and section.gallery.size > 0 %}{% assign has_gallery = true %}{% endif %}
+  {% assign has_stats = false %}
+  {% if section.stats and section.stats.size > 0 %}{% assign has_stats = true %}{% endif %}
+
+  {% if has_items or has_gallery or has_stats %}
+<h2>{{ section.title }}</h2><hr />
+
+    {% if has_stats %}
 <ul class="ap-stats">
-{%- for stat in volunteer.stats %}
+{%- for stat in section.stats %}
   <li><span class="value">{{ stat.value }}</span><span class="label">{{ stat.label }}</span></li>
 {%- endfor %}
 </ul>
-{% endif %}
+    {% endif %}
 
-{% if volunteer.gallery and volunteer.gallery.size > 0 %}
-<div class="ap-gallery" data-gallery aria-roledescription="carousel" aria-label="Volunteering photos">
-  <div class="ap-gallery__viewport">
-    <button class="ap-gallery__nav ap-gallery__nav--prev" type="button" data-gallery-prev aria-label="Previous photo">
-      <span aria-hidden="true">&#8249;</span>
-    </button>
-    <div class="ap-gallery__track">
-      {%- for shot in volunteer.gallery %}
-      <figure class="ap-gallery__slide{% if forloop.first %} is-active{% endif %}"
-              role="group" aria-roledescription="slide"
-              aria-label="{{ forloop.index }} of {{ volunteer.gallery.size }}">
-        <img src="{{ shot.src | prepend: '/images/' | prepend: base_path }}"
-             alt="{{ shot.caption }}" loading="lazy" decoding="async">
-      </figure>
-      {%- endfor %}
+    {% if has_gallery %}
+      {% assign gallery_count = gallery_count | plus: 1 %}
+      {% include gallery.html items=section.gallery label=section.title %}
+    {% endif %}
+
+    {% if has_items %}
+      {% for item in section.items %}
+<div class="ap-row ap-row--narrow">
+  <div class="ap-row__date">{{ item.period }}</div>
+  <div>
+    <div class="ap-row__title">{{ item.title }}</div>
+    {% if item.org %}<div class="ap-row__org">{{ item.org }}</div>{% endif %}
+    {% if item.detail or item.links %}
+    <div class="ap-row__detail">
+      {{- item.detail | markdownify | remove: "<p>" | remove: "</p>" | strip -}}
+      {%- if item.links %}
+      <p class="ap-entry__links">
+        {%- for link in item.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
+      </p>
+      {%- endif %}
     </div>
-    <button class="ap-gallery__nav ap-gallery__nav--next" type="button" data-gallery-next aria-label="Next photo">
-      <span aria-hidden="true">&#8250;</span>
-    </button>
-  </div>
-
-  <figcaption class="ap-gallery__caption" data-gallery-caption aria-live="polite">
-    {{ volunteer.gallery[0].caption }}
-  </figcaption>
-
-  <div class="ap-gallery__dots" role="tablist" aria-label="Choose photo">
-    {%- for shot in volunteer.gallery %}
-    <button class="ap-gallery__dot{% if forloop.first %} is-active{% endif %}" type="button"
-            role="tab" data-gallery-dot="{{ forloop.index0 }}"
-            aria-label="{{ shot.caption }}"
-            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>
-    {%- endfor %}
+    {% endif %}
   </div>
 </div>
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
+{% if gallery_count > 0 %}
 <script>
   (function () {
     document.querySelectorAll('[data-gallery]').forEach(function (root) {
@@ -112,29 +116,3 @@ author_profile: true
   })();
 </script>
 {% endif %}
-{% endif %}
-
-{% for group in beyond.groups %}
-  {% if group.items and group.items.size > 0 %}
-<h2>{{ group.title }}</h2><hr />
-  {% for item in group.items %}
-<div class="ap-row ap-row--narrow">
-  <div class="ap-row__date">{{ item.period }}</div>
-  <div>
-    <div class="ap-row__title">{{ item.title }}</div>
-    {% if item.org %}<div class="ap-row__org">{{ item.org }}</div>{% endif %}
-    {% if item.detail or item.links %}
-    <div class="ap-row__detail">
-      {{- item.detail | markdownify | remove: "<p>" | remove: "</p>" | strip -}}
-      {%- if item.links %}
-      <p class="ap-entry__links">
-        {%- for link in item.links %}<a href="{{ link.href }}">{{ link.label }}</a>{% endfor -%}
-      </p>
-      {%- endif %}
-    </div>
-    {% endif %}
-  </div>
-</div>
-  {% endfor %}
-  {% endif %}
-{% endfor %}

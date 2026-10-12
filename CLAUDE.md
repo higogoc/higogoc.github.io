@@ -68,6 +68,11 @@ If Ruby is available: `bundle install && bundle exec jekyll serve --livereload`.
   scripts. The `Jekyll build check` workflow parses every inline script in
   `_site` with `node --check`, so a regression fails CI.
 
+- Everything under `images/` is published and indexed. Never commit a scan of
+  an official document (certificates, awards, IDs) &mdash; they carry names,
+  issue numbers and resident registration fields. Quote the figure in text
+  instead and keep the scan out of the repo.
+
 ## Content accuracy
 
 Publication records, award dates, team lists, and venue details are factual

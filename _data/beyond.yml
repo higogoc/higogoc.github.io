@@ -1,24 +1,27 @@
 # Edited by hand. Jekyll reads this as site.data.beyond
-# The page has two kinds of section:
-#   volunteer  -> its own heading, with a stat row and a click-through photo
-#                 strip. Each gallery `src` is a file in images/.
-#   groups     -> dated entry lists. A group with an empty `items` is skipped.
+#
+# `sections` is a list of headings. Each one may carry any combination of:
+#   stats   -> a row of figure + label cards
+#   gallery -> a click-through photo strip; each `src` is a file in images/
+#   items   -> a dated entry list
+# A section with none of them filled in is skipped entirely.
+#
 # **double asterisks** render as bold.
 intro: "Work that sits outside the publication record but shapes how I approach it."
 
-volunteer:
-  title: "Volunteer"
-  stats:
-    - { value: "500+", label: "Hours of volunteer service" }
-  gallery:
-    - src: "volunteer-1.jpg"
-      caption: "PyeongChang 2018 Winter Olympics volunteer"
-    - src: "volunteer-2.jpg"
-      caption: "Coal briquette delivery volunteer"
-    - src: "volunteer-3.jpg"
-      caption: "Shelter dog care volunteer"
+sections:
+  - title: "Volunteer"
+    stats:
+      - { value: "552", label: "Volunteer hours certified since 2011" }
+      - { value: "82", label: "Volunteer activities" }
+    gallery:
+      - src: "volunteer-1.jpg"
+        caption: "PyeongChang 2018 Winter Olympics volunteer"
+      - src: "volunteer-2.jpg"
+        caption: "Coal briquette delivery volunteer"
+      - src: "volunteer-3.jpg"
+        caption: "Shelter dog care volunteer"
 
-groups:
   - title: "Donation"
     items:
       - period: "2024"
@@ -29,4 +32,8 @@ groups:
           - { label: "Development fund", href: "https://dtm.snuh.org/fund" }
 
   - title: "Athletics"
-    items: []
+    gallery:
+      - src: "athletics-1.jpg"
+        caption: "Futsal"
+      - src: "athletics-2.jpg"
+        caption: "Running"

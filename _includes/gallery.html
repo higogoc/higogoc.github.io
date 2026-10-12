@@ -1,0 +1,39 @@
+{%- comment -%}
+Click-through photo strip. Several can sit on one page; the script in the
+page scopes itself to each [data-gallery] root.
+Usage: {% include gallery.html items=section.gallery label=section.title %}
+{%- endcomment -%}
+{% include base_path %}
+<div class="ap-gallery" data-gallery aria-roledescription="carousel" aria-label="{{ include.label }} photos">
+  <div class="ap-gallery__viewport">
+    <button class="ap-gallery__nav ap-gallery__nav--prev" type="button" data-gallery-prev aria-label="Previous photo">
+      <span aria-hidden="true">&#8249;</span>
+    </button>
+    <div class="ap-gallery__track">
+      {%- for shot in include.items %}
+      <figure class="ap-gallery__slide{% if forloop.first %} is-active{% endif %}"
+              role="group" aria-roledescription="slide"
+              aria-label="{{ forloop.index }} of {{ include.items.size }}">
+        <img src="{{ shot.src | prepend: '/images/' | prepend: base_path }}"
+             alt="{{ shot.caption }}" loading="lazy" decoding="async">
+      </figure>
+      {%- endfor %}
+    </div>
+    <button class="ap-gallery__nav ap-gallery__nav--next" type="button" data-gallery-next aria-label="Next photo">
+      <span aria-hidden="true">&#8250;</span>
+    </button>
+  </div>
+
+  <figcaption class="ap-gallery__caption" data-gallery-caption aria-live="polite">
+    {{ include.items[0].caption }}
+  </figcaption>
+
+  <div class="ap-gallery__dots" role="tablist" aria-label="Choose photo">
+    {%- for shot in include.items %}
+    <button class="ap-gallery__dot{% if forloop.first %} is-active{% endif %}" type="button"
+            role="tab" data-gallery-dot="{{ forloop.index0 }}"
+            aria-label="{{ shot.caption }}"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+    {%- endfor %}
+  </div>
+</div>

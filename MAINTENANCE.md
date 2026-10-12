@@ -223,18 +223,21 @@ All three render on `/talks/`.
 
 ### `_data/beyond.yml`
 
+One list of `sections`. Each may carry any combination of `stats`, `gallery`
+and `items`; a section with none of them filled in is skipped, so an empty
+category stays out of the way until you have something for it.
+
 ```yaml
 intro: "One line of framing."
 
-volunteer:
-  title: "Volunteer"
-  stats:
-    - { value: "500+", label: "Hours of volunteer service" }
-  gallery:
-    - src: "volunteer-1.jpg"
-      caption: "PyeongChang 2018 Winter Olympics volunteer"
+sections:
+  - title: "Volunteer"
+    stats:
+      - { value: "552", label: "Volunteer hours certified since 2011" }
+    gallery:
+      - src: "volunteer-1.jpg"
+        caption: "PyeongChang 2018 Winter Olympics volunteer"
 
-groups:
   - title: "Donation"
     items:
       - period: "2024"
@@ -245,18 +248,19 @@ groups:
           - { label: "...", href: "https://..." }
 ```
 
-The page has two kinds of section. `volunteer` gets its own heading with a stat
-row and a click-through photo strip (arrows, dots, keyboard arrows, and a small
-caption). `groups` are ordinary dated entry lists, one heading each; a group
-with an empty `items` list is skipped, so unused categories stay out of the way
-until you fill them in.
+A `gallery` renders as a click-through photo strip with arrows, dots, keyboard
+arrows and a small caption. Several sections can each have one.
 
 To add a photo: drop the file in `images/` using an **ASCII filename** (no
 Korean, spaces or brackets, they break the URL), resize it to about 1400px on
-the long side so the page stays light, and add a `src` + `caption` pair under
-`volunteer.gallery`. The caption doubles as the image's alt text, so write it
-as a description. Photos are never cropped &mdash; they sit inside a fixed frame
-whatever their shape.
+the long side so the page stays light, and add a `src` + `caption` pair. The
+caption doubles as the image's alt text, so write it as a description. Photos
+are never cropped &mdash; they sit inside a fixed frame whatever their shape.
+
+**Do not put scans of official documents here.** Certificates and the like
+carry a name, an issue number and often a resident registration field, and
+everything under `images/` is served publicly and indexed. Quote the figure in
+a `stats` entry instead.
 
 ---
 
