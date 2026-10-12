@@ -59,6 +59,15 @@ If Ruby is available: `bundle install && bundle exec jekyll serve --livereload`.
   challenge also produced a peer-reviewed paper, that paper is listed under
   `conference` in `publications.yml` with `note: "Proceedings"`.
 
+## Gotchas
+
+- `_config.yml` enables `compress_html`, which strips newlines from the built
+  page. A `//` comment inside an inline `<script>` therefore comments out the
+  **rest of the script** and the whole block dies with
+  `Uncaught SyntaxError: Unexpected end of input`. Use `/* */` in inline
+  scripts. The `Jekyll build check` workflow parses every inline script in
+  `_site` with `node --check`, so a regression fails CI.
+
 ## Content accuracy
 
 Publication records, award dates, team lists, and venue details are factual

@@ -45,3 +45,47 @@ jobs:
         run: bundle exec jekyll build --trace
         env:
           JEKYLL_ENV: production
+
+      - name: Syntax-check inline scripts in the built HTML
+        # compress_html strips newlines from the output, so a line comment
+        # inside an inline <script> silently comments out the rest of it and
+        # the whole block dies at runtime. Parse what actually ships.
+        run: |
+          python - <<'PY'
+          import os
+          import pathlib
+          import re
+          import subprocess
+          import sys
+          import tempfile
+
+          SCRIPT = re.compile(r'<script([^>]*)>(.*?)</script>', re.S)
+          failed = []
+          checked = 0
+
+          for page in sorted(pathlib.Path('_site').rglob('*.html')):
+              html = page.read_text(encoding='utf-8', errors='replace')
+              for attrs, body in SCRIPT.findall(html):
+                  if 'src=' in attrs or 'json' in attrs:
+                      continue
+                  body = body.strip()
+                  if not body:
+                      continue
+                  checked += 1
+                  handle = tempfile.NamedTemporaryFile(
+                      'w', suffix='.js', delete=False, encoding='utf-8')
+                  handle.write(body)
+                  handle.close()
+                  result = subprocess.run(
+                      ['node', '--check', handle.name],
+                      capture_output=True, text=True)
+                  os.unlink(handle.name)
+                  if result.returncode != 0:
+                      detail = result.stderr.strip().splitlines()
+                      failed.append(f'{page}: {detail[-1] if detail else "parse error"}')
+
+          print(f'checked {checked} inline script(s)')
+          for item in failed:
+              print('FAIL', item)
+          sys.exit(1 if failed else 0)
+          PY
