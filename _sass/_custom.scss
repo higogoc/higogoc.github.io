@@ -217,6 +217,130 @@
 }
 
 /* --------------------------------------------------------------------------
+   Photo gallery (Beyond Research) — click-through strip with captions
+   Images keep their own aspect ratio inside a fixed frame, so nothing is
+   cropped. Without JS the first photo shows and the controls stay hidden.
+   -------------------------------------------------------------------------- */
+
+.ap-gallery {
+  margin: 0 0 2em;
+}
+
+.ap-gallery__viewport {
+  position: relative;
+}
+
+.ap-gallery__track {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  max-height: 24em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+  background: var(--global-footer-bg-color);
+  overflow: hidden;
+}
+
+.ap-gallery__slide {
+  display: none;
+  margin: 0;
+  height: 100%;
+}
+
+.ap-gallery__slide.is-active {
+  display: block;
+}
+
+.ap-gallery__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.ap-gallery__nav {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.1em;
+  height: 2.1em;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--global-border-color);
+  border-radius: 50%;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  font-size: 1.2em;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.ap-gallery.is-enhanced .ap-gallery__nav {
+  display: flex;
+}
+
+.ap-gallery__nav:hover,
+.ap-gallery__nav:focus-visible {
+  opacity: 1;
+  color: var(--global-link-color);
+  border-color: var(--global-link-color);
+}
+
+.ap-gallery__nav--prev { left: 0.5em; }
+.ap-gallery__nav--next { right: 0.5em; }
+
+.ap-gallery__caption {
+  margin: 0.6em 0 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: var(--global-text-color-light);
+}
+
+.ap-gallery__dots {
+  display: none;
+  justify-content: center;
+  gap: 0.4em;
+  margin-top: 0.6em;
+}
+
+.ap-gallery.is-enhanced .ap-gallery__dots {
+  display: flex;
+}
+
+.ap-gallery__dot {
+  width: 0.5em;
+  height: 0.5em;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--global-dark-border-color);
+  cursor: pointer;
+}
+
+.ap-gallery__dot.is-active {
+  background: var(--global-link-color);
+}
+
+.ap-gallery__dot:focus-visible {
+  outline: 2px solid var(--global-link-color);
+  outline-offset: 2px;
+}
+
+@media (max-width: 37.5em) {
+  .ap-gallery__track {
+    aspect-ratio: 1 / 1;
+  }
+
+  .ap-gallery__nav {
+    width: 1.9em;
+    height: 1.9em;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Skills grid (CV page)
    -------------------------------------------------------------------------- */
 

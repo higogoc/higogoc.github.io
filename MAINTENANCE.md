@@ -225,16 +225,32 @@ All three render on `/talks/`.
 
 ```yaml
 intro: "One line of framing."
+
 stats:
   - { value: "500+", label: "Hours of volunteer service" }
+
+gallery:
+  - src: "volunteer-1.jpg"
+    caption: "PyeongChang 2018 Winter Olympics volunteer"
+
 groups:
-  - title: "Volunteering"
+  - title: "Giving"
     items:
-      - period: "2019 – Present"
+      - period: "2024"
         title: "..."
         org: "..."
         detail: "..."
 ```
+
+`gallery` renders a click-through photo strip under the stats, with arrows,
+dots and a small caption. Each `src` is a file in `images/`. Volunteering is
+shown this way rather than as a list of entries.
+
+To add a photo: drop the file in `images/` using an **ASCII filename** (no
+Korean, spaces or brackets, they break the URL), resize it to about 1400px on
+the long side so the page stays light, and add a `src` + `caption` pair here.
+The caption doubles as the image's alt text, so write it as a description.
+Photos are never cropped — they sit inside a fixed frame whatever their shape.
 
 A group with an empty `items` list is skipped, so unused categories stay out of
 the way until you fill them in.
@@ -246,7 +262,8 @@ the way until you fill them in.
 The theme ships five colour schemes. Change `site_theme` in `_config.yml` to
 `default`, `air`, `sunrise`, `mint`, `dirt`, or `contrast`.
 
-Site-specific styling — entry rows, keyword chips, the news list, stat cards — lives
+Site-specific styling — entry rows, keyword chips, the news list, stat cards,
+the photo gallery — lives
 in `_sass/_custom.scss`. It is written against the theme's own CSS variables, so
 it follows whichever scheme you pick, in both light and dark mode.
 

@@ -1,10 +1,20 @@
 # Edited by hand. Jekyll reads this as site.data.beyond
 # A group with an empty `items` list is skipped entirely.
+# `gallery` renders as a click-through photo strip under the stats; each
+# image lives in images/ and carries a short caption.
 # **double asterisks** render as bold.
 intro: "Work that sits outside the publication record but shapes how I approach it."
 
 stats:
   - { value: "500+", label: "Hours of volunteer service" }
+
+gallery:
+  - src: "volunteer-1.jpg"
+    caption: "PyeongChang 2018 Winter Olympics volunteer"
+  - src: "volunteer-2.jpg"
+    caption: "Coal briquette delivery volunteer"
+  - src: "volunteer-3.jpg"
+    caption: "Shelter dog care volunteer"
 
 groups:
   - title: "Giving"
@@ -15,25 +25,6 @@ groups:
         detail: "**KRW 1,500,000**, funded by the prize from the **2024 Metaverse Developer Contest** (Ministry of Science and ICT) together with personal funds, directed to education and research within the department."
         links:
           - { label: "Development fund", href: "https://dtm.snuh.org/fund" }
-
-  - title: "Volunteering"
-    items:
-      - period: "2018.02"
-        title: "Games Volunteer"
-        org: "PyeongChang 2018 Olympic Winter Games"
-        detail: "One month of service over the course of the Games."
-
-      - period: "2016.10"
-        title: "Sori Angels (&#49548;&#47532;&#52380;&#49324;) student volunteer corps"
-        org: "2016 Jeonju International Sori Festival"
-        detail: "Stage setup and event operations across the festival run, alongside coursework. Featured in the Jeonbuk National University student newspaper."
-        links:
-          - { label: "Article", href: "https://www.jbpresscenter.com/news/articleView.html?idxno=6109" }
-
-      - period: "2016.07"
-        title: "Summer Overseas Volunteer Program, Vietnam"
-        org: "Jeonbuk National University"
-        detail: "Two weeks of overseas volunteer service."
 
   - title: "Athletics"
     items: []
