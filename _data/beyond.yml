@@ -1,23 +1,25 @@
 # Edited by hand. Jekyll reads this as site.data.beyond
-# A group with an empty `items` list is skipped entirely.
-# `gallery` renders as a click-through photo strip under the stats; each
-# image lives in images/ and carries a short caption.
+# The page has two kinds of section:
+#   volunteer  -> its own heading, with a stat row and a click-through photo
+#                 strip. Each gallery `src` is a file in images/.
+#   groups     -> dated entry lists. A group with an empty `items` is skipped.
 # **double asterisks** render as bold.
 intro: "Work that sits outside the publication record but shapes how I approach it."
 
-stats:
-  - { value: "500+", label: "Hours of volunteer service" }
-
-gallery:
-  - src: "volunteer-1.jpg"
-    caption: "PyeongChang 2018 Winter Olympics volunteer"
-  - src: "volunteer-2.jpg"
-    caption: "Coal briquette delivery volunteer"
-  - src: "volunteer-3.jpg"
-    caption: "Shelter dog care volunteer"
+volunteer:
+  title: "Volunteer"
+  stats:
+    - { value: "500+", label: "Hours of volunteer service" }
+  gallery:
+    - src: "volunteer-1.jpg"
+      caption: "PyeongChang 2018 Winter Olympics volunteer"
+    - src: "volunteer-2.jpg"
+      caption: "Coal briquette delivery volunteer"
+    - src: "volunteer-3.jpg"
+      caption: "Shelter dog care volunteer"
 
 groups:
-  - title: "Giving"
+  - title: "Donation"
     items:
       - period: "2024"
         title: "Donation to the Department of Transdisciplinary Medicine Development Fund"

@@ -226,34 +226,37 @@ All three render on `/talks/`.
 ```yaml
 intro: "One line of framing."
 
-stats:
-  - { value: "500+", label: "Hours of volunteer service" }
-
-gallery:
-  - src: "volunteer-1.jpg"
-    caption: "PyeongChang 2018 Winter Olympics volunteer"
+volunteer:
+  title: "Volunteer"
+  stats:
+    - { value: "500+", label: "Hours of volunteer service" }
+  gallery:
+    - src: "volunteer-1.jpg"
+      caption: "PyeongChang 2018 Winter Olympics volunteer"
 
 groups:
-  - title: "Giving"
+  - title: "Donation"
     items:
       - period: "2024"
         title: "..."
         org: "..."
         detail: "..."
+        links:
+          - { label: "...", href: "https://..." }
 ```
 
-`gallery` renders a click-through photo strip under the stats, with arrows,
-dots and a small caption. Each `src` is a file in `images/`. Volunteering is
-shown this way rather than as a list of entries.
+The page has two kinds of section. `volunteer` gets its own heading with a stat
+row and a click-through photo strip (arrows, dots, keyboard arrows, and a small
+caption). `groups` are ordinary dated entry lists, one heading each; a group
+with an empty `items` list is skipped, so unused categories stay out of the way
+until you fill them in.
 
 To add a photo: drop the file in `images/` using an **ASCII filename** (no
 Korean, spaces or brackets, they break the URL), resize it to about 1400px on
-the long side so the page stays light, and add a `src` + `caption` pair here.
-The caption doubles as the image's alt text, so write it as a description.
-Photos are never cropped — they sit inside a fixed frame whatever their shape.
-
-A group with an empty `items` list is skipped, so unused categories stay out of
-the way until you fill them in.
+the long side so the page stays light, and add a `src` + `caption` pair under
+`volunteer.gallery`. The caption doubles as the image's alt text, so write it
+as a description. Photos are never cropped &mdash; they sit inside a fixed frame
+whatever their shape.
 
 ---
 
